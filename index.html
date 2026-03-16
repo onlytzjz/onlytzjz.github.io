@@ -1,1165 +1,1063 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>万子嘉 — 商品企划作品集</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0d0d0d;--gray-dark:#444;--gray-mid:#888;--gray-light:#bbb;--bg:#fafaf8;--card-bg:#f2f2ef;--white:#ffffff;--accent:#c8a96e;--max-w:1200px}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans','PingFang SC',sans-serif;background:var(--bg);color:var(--black);font-size:16px;line-height:1.6;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06);height:60px;display:flex;align-items:center}
-.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;width:100%}
-.nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--black);text-decoration:none}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--gray-dark);font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-.nav-links a:hover{color:var(--black)}
-section{padding:100px 40px}
-.container{max-width:var(--max-w);margin:0 auto}
-.section-label{font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-mid);margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:100px;position:relative;overflow:hidden}
-.hero-bg-text{position:absolute;bottom:-40px;right:-20px;font-family:'DM Serif Display',serif;font-size:clamp(100px,18vw,260px);color:rgba(0,0,0,0.04);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
-.hero-inner{max-width:680px;margin:0 auto;width:100%}
-.hero-eyebrow{font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:24px}
-.hero-title{font-family:'DM Serif Display',serif;font-size:clamp(42px,5vw,68px);line-height:1.1;color:var(--black);margin-bottom:20px}
-.hero-title em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:0.95rem;color:var(--gray-mid);letter-spacing:0.04em;margin-bottom:16px}
-.hero-desc{font-size:1rem;color:var(--gray-dark);line-height:1.8;max-width:420px;margin-bottom:44px}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:var(--white);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.2s}
-.btn-primary:hover{background:#2a2a2a;transform:translateY(-1px)}
-.btn-primary:hover svg{transform:translateX(4px)}
-.btn-primary svg{transition:transform 0.2s}
-#portfolio{background:var(--black);color:var(--white)}
-#portfolio .section-label{color:rgba(255,255,255,0.35)}
-#portfolio .section-label::before{background:var(--accent)}
-.portfolio-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,44px);color:var(--white);margin-bottom:56px;max-width:560px;line-height:1.2}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.p-card{background:#1a1a1a;padding:44px 36px;cursor:pointer;transition:background 0.25s;border-top:1px solid rgba(255,255,255,0.08);position:relative;overflow:hidden}
-.p-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width 0.35s ease}
-.p-card:hover{background:#222}
-.p-card:hover::after{width:100%}
-.p-card-icon{width:44px;height:44px;margin-bottom:28px;display:flex;align-items:center;justify-content:center;background:rgba(200,169,110,0.12);color:var(--accent)}
-.p-card-num{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px}
-.p-card-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:14px;line-height:1.2}
-.p-card-desc{font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.7}
-.p-card-arrow{margin-top:32px;display:flex;align-items:center;gap:8px;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);opacity:0;transition:opacity 0.2s}
-.p-card:hover .p-card-arrow{opacity:1}
-.case-section-title{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,38px);line-height:1.15}
-.case-section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px}
-.divider{height:1px;background:rgba(0,0,0,0.06)}
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-</style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>万子嘉 — 商品企划作品集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- 引入Font Awesome简化图标（可选，提升图标体验） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局重置与基础变量 */
+        *,*::before,*::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --black: #0d0d0d;
+            --gray-dark: #444;
+            --gray-mid: #888;
+            --gray-light: #bbb;
+            --bg: #fafaf8;
+            --card-bg: #f2f2ef;
+            --white: #ffffff;
+            --accent: #c8a96e;
+            --max-w: 1200px;
+            --transition-base: 0.3s ease; /* 统一过渡动画 */
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px; /* 适配固定导航的滚动锚点 */
+        }
+        body {
+            font-family: 'DM Sans', 'PingFang SC', sans-serif;
+            background: var(--bg);
+            color: var(--black);
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 导航栏升级：移动端汉堡菜单 + 交互优化 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 250, 248, 0.95); /* 提升透明度 */
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            transition: background var(--transition-base); /* 滚动时背景加深 */
+        }
+        .nav-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 5vw; /* 改用相对单位适配移动端 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .nav-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.05rem;
+            color: var(--black);
+            text-decoration: none;
+            z-index: 101; /* 确保logo在汉堡菜单上层 */
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-dark);
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color var(--transition-base);
+            position: relative;
+        }
+        /* 导航链接下划线动画 */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width var(--transition-base);
+        }
+        .nav-links a:hover {
+            color: var(--black);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        /* 汉堡菜单按钮（移动端） */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            z-index: 101;
+        }
+        .hamburger span {
+            width: 22px;
+            height: 1.5px;
+            background: var(--black);
+            transition: transform var(--transition-base), opacity var(--transition-base);
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 100px 5vw; /* 改用相对单位 */
+            scroll-margin-top: 60px; /* 锚点滚动偏移 */
+        }
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gray-mid);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        /* 英雄区升级：视觉层次 + 动画优化 */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg-text {
+            position: absolute;
+            bottom: -40px;
+            right: -20px;
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(100px, 18vw, 260px);
+            color: rgba(0, 0, 0, 0.04);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            animation: bgTextFloat 8s ease-in-out infinite; /* 背景文字浮动动画 */
+        }
+        @keyframes bgTextFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .hero-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .hero-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.1;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+        .hero-title em {
+            font-style: italic;
+            color: var(--accent);
+        }
+        .hero-sub {
+            font-size: 0.95rem;
+            color: var(--gray-mid);
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+        .hero-desc {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            line-height: 1.8;
+            max-width: 420px;
+            margin-bottom: 44px;
+        }
+
+        /* 按钮升级：按压反馈 + 焦点状态（无障碍） */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background var(--transition-base), transform var(--transition-base);
+            border-radius: 2px; /* 轻微圆角提升质感 */
+        }
+        .btn-primary:hover {
+            background: #2a2a2a;
+            transform: translateY(-1px);
+        }
+        .btn-primary:active {
+            transform: translateY(0); /* 点击按压效果 */
+        }
+        .btn-primary:focus {
+            outline: 2px solid var(--accent); /* 焦点轮廓（无障碍） */
+            outline-offset: 4px;
+        }
+        .btn-primary:hover svg {
+            transform: translateX(4px);
+        }
+        .btn-primary svg {
+            transition: transform var(--transition-base);
+        }
+
+        /* 作品集区块升级：交互细节 + 响应式优化 */
+        #portfolio {
+            background: var(--black);
+            color: var(--white);
+        }
+        #portfolio .section-label {
+            color: rgba(255, 255, 255, 0.35);
+        }
+        #portfolio .section-label::before {
+            background: var(--accent);
+        }
+        .portfolio-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(28px, 3.5vw, 44px);
+            color: var(--white);
+            margin-bottom: 56px;
+            max-width: 560px;
+            line-height: 1.2;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+        .p-card {
+            background: #1a1a1a;
+            padding: 44px 36px;
+            cursor: pointer;
+            transition: background var(--transition-base);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .p-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.35s ease;
+        }
+        .p-card:hover {
+            background: #222;
+        }
+        .p-card:hover::after {
+            width: 100%;
+        }
+        .p-card-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(200, 169, 110, 0.12);
+            color: var(--accent);
+            border-radius: 4px; /* 轻微圆角 */
+        }
+        .p-card-num {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
+            margin-bottom: 12px;
+        }
+        .p-card-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+        .p-card-desc {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.7;
+        }
+        .p-card-arrow {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .p-card:hover .p-card-arrow {
+            opacity: 1;
+        }
+
+        /* 案例标题通用样式 */
+        .case-section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(26px, 3vw, 38px);
+            line-height: 1.15;
+        }
+        .case-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.06);
+        }
+
+        /* 滚动动画升级：更细腻的过渡 + 初始延迟 */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: 
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), 
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 行业洞察区块：整合样式 + 交互优化 */
+        #industry-insights {
+            background: #fafaf8;
+        }
+        .ig-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .ig-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .ig-grid-12 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .ig-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 24px 22px;
+            border-radius: 6px; /* 卡片圆角提升质感 */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02); /* 轻微阴影增加层次 */
+            transition: box-shadow var(--transition-base);
+        }
+        .ig-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 悬浮阴影 */
+        }
+        .ig-card-title {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .insight-page {
+            margin-bottom: 72px;
+        }
+        .insight-page-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+        .insight-page-title span {
+            font-size: 0.75rem;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-mid);
+            font-weight: 400;
+        }
+        .data-source {
+            font-size: 0.72rem;
+            color: var(--gray-light);
+            letter-spacing: 0.05em;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .data-source::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+        .mkt-item {
+            margin-bottom: 18px;
+        }
+        .mkt-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .mkt-name {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--black);
+        }
+        .mkt-yoy {
+            font-size: 0.72rem;
+            font-weight: 500;
+            padding: 2px 7px;
+            border-radius: 2px;
+        }
+        .yoy-neg {
+            background: rgba(220, 60, 60, 0.1);
+            color: #c0392b;
+        }
+        .yoy-pos {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+        }
+        .mkt-bar-wrap {
+            background: #f0f0ec;
+            height: 28px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px; /* 进度条圆角 */
+        }
+        .mkt-bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+            transition: width 1s ease; /* 进度条加载动画 */
+        }
+        .mkt-bar-val {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--white);
+        }
+        .mkt-sub {
+            font-size: 0.7rem;
+            color: var(--gray-mid);
+            margin-top: 4px;
+        }
+        .mkt-sub em {
+            color: var(--accent);
+            font-style: normal;
+        }
+        .donut-wrap {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap; /* 移动端换行 */
+            justify-content: center;
+        }
+        .donut-legend {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 180px; /* 图例最小宽度 */
+        }
+        .dl-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            color: var(--gray-dark);
+        }
+        .dl-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .dl-pct {
+            margin-left: auto;
+            font-weight: 500;
+            color: var(--black);
+            font-size: 0.82rem;
+        }
+        .ai-insights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .ai-item {
+            background: #f8f7f3;
+            padding: 18px 20px;
+            border-left: 3px solid transparent;
+            border-radius: 4px; /* 提示框圆角 */
+            transition: transform var(--transition-base);
+        }
+        .ai-item:hover {
+            transform: translateX(4px); /* 悬浮偏移 */
+        }
+        .ai-item.alert { border-color: #e74c3c; }
+        .ai-item.growth { border-color: #27ae60; }
+        .ai-item.premium { border-color: #9b59b6; }
+        .ai-item.diff { border-color: var(--accent); }
+        .ai-item-title {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+        .ai-item-body {
+            font-size: 0.78rem;
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+        .stacked-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 7px;
+        }
+        .stacked-row-label {
+            font-size: 0.72rem;
+            color: var(--gray-dark);
+            width: 72px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+        .stacked-track {
+            flex: 1;
+            height: 20px;
+            display: flex;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+        .seg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.62rem;
+            color: var(--white);
+            font-weight: 500;
+        }
+        .legend-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+        .legend-pill {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.7rem;
+            color: var(--gray-dark);
+        }
+        .legend-swatch {
+            width: 10px;
+            height: 10px;
+            border-radius: 1px;
+            flex-shrink: 0;
+        }
+        .stacked-section {
+            margin-bottom: 16px;
+        }
+        .stacked-section-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray-mid);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .stacked-section-label::before {
+            content: '';
+            width: 10px;
+            height: 2px;
+            background: var(--accent);
+        }
+        .hm-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        }
+        .hm-table th {
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--gray-mid);
+            padding: 6px 8px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .hm-table td {
+            padding: 7px 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .hm-table td:first-child {
+            text-align: left;
+            color: var(--gray-dark);
+            font-weight: 400;
+        }
+        .hm-low { background: #f0f0ec; color: var(--gray-mid); }
+        .hm-mid { background: rgba(200, 169, 110, 0.25); color: #8a6e30; }
+        .hm-high { background: rgba(200, 169, 110, 0.65); color: #5a4010; }
+        .hm-dom { background: var(--accent); color: var(--white); }
+        .hm-grow { background: rgba(39, 174, 96, 0.25); color: #1a7a43; }
+        .hm-dash { color: #ccc; background: #fafaf8; }
+        .section-divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.06);
+            margin: 48px 0;
+        }
+
+        /* 响应式升级：多断点适配 + 交互优化 */
+        @media (max-width: 900px) {
+            /* 导航改为汉堡菜单 */
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: var(--bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                font-size: 1.2rem;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: transform var(--transition-base), opacity var(--transition-base);
+            }
+            .nav-links.active {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .hamburger {
+                display: flex;
+            }
+            /* 汉堡菜单动画 */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            /* 栅格适配 */
+            .ig-grid-3, .ig-grid-2, .ig-grid-12 {
+                grid-template-columns: 1fr;
+                gap: 12px; /* 缩小移动端间距 */
+                margin-bottom: 12px;
+            }
+            .ai-insights {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr; /* 作品集卡片移动端单列 */
+            }
+            .p-card {
+                padding: 32px 24px; /* 缩小移动端卡片内边距 */
+            }
+        }
+
+        @media (max-width: 600px) {
+            /* 超小屏适配 */
+            section {
+                padding: 80px 5vw; /* 减少上下内边距 */
+            }
+            .hero-desc {
+                max-width: 100%; /* 移动端文本全屏宽 */
+            }
+            .btn-primary {
+                padding: 12px 24px; /* 缩小按钮尺寸 */
+            }
+            .donut-wrap {
+                gap: 16px;
+            }
+            .ai-item {
+                padding: 16px 18px; /* 缩小提示框内边距 */
+            }
+        }
+
+        /* 加载动画：进度条逐步显示 */
+        @keyframes barFill {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .fade-up.visible .mkt-bar-fill {
+            animation: barFill 1s ease forwards;
+        }
+    </style>
 </head>
 <body>
-<nav>
-<div class="nav-inner">
-<a href="#hero" class="nav-logo">万子嘉</a>
-<ul class="nav-links">
-<li><a href="#hero">首页</a></li>
-<li><a href="#industry-insights">行业洞察</a></li>
-<li><a href="#category-planning">战略规划</a></li>
-<li><a href="#sales-data-analysis">销售分析</a></li>
-<li><a href="#about">关于我</a></li>
-</ul>
-</div>
-</nav>
-<section id="hero">
-<div class="hero-bg-text">MD</div>
-<div class="hero-inner fade-up">
-<p class="hero-eyebrow">Merchandise Planning Portfolio</p>
-<h1 class="hero-title">商品企划<br><em>作品集</em></h1>
-<p class="hero-sub">万子嘉 · 东华大学</p>
-<p class="hero-desc">本作品集展示了我在商品企划领域的实践案例，包括行业洞察、战略规划以及销售数据分析。通过数据与策略结合，探索产品成功的逻辑。</p>
-<a href="#portfolio" class="btn-primary">查看作品<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-</div>
-</section>
-<section id="portfolio">
-<div class="container">
-<p class="section-label">核心能力</p>
-<h2 class="portfolio-title">三大维度，构建商品企划实践案例</h2>
-<div class="portfolio-grid">
-<div class="p-card" onclick="document.querySelector('#industry-insights').scrollIntoView({behavior:'smooth'})">
-<div class="p-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-<div class="p-card-num">01</div><h3 class="p-card-title">行业洞察</h3>
-<p class="p-card-desc">研究市场品牌竞争格局，分析产品定位、价格策略与设计趋势。</p>
-<div class="p-card-arrow">查看案例 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-</div>
-<div class="p-card" onclick="document.querySelector('#category-planning').scrollIntoView({behavior:'smooth'})">
-<div class="p-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="11" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" stroke="currentColor" stroke-width="1.5"/></svg></div>
-<div class="p-card-num">02</div><h3 class="p-card-title">战略规划</h3>
-<p class="p-card-desc">基于市场需求与品牌定位，进行产品结构规划与系列设计。</p>
-<div class="p-card-arrow">查看案例 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-</div>
-<div class="p-card" onclick="document.querySelector('#sales-data-analysis').scrollIntoView({behavior:'smooth'})">
-<div class="p-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 15l4-5 4 2 6-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-<div class="p-card-num">03</div><h3 class="p-card-title">销售数据分析</h3>
-<p class="p-card-desc">通过数据分析销售表现，识别爆款机会与优化产品结构。</p>
-<div class="p-card-arrow">查看案例 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-</div>
-</div>
-</div>
-</section>
-<section id="industry-insights" style="background:#fafaf8;padding:100px 40px">
-<style>
-.ig-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
-.ig-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:16px}
-.ig-grid-12{display:grid;grid-template-columns:1fr 2fr;gap:16px;margin-bottom:16px}
-.ig-card{background:var(--white);border:1px solid rgba(0,0,0,0.06);padding:24px 22px}
-.ig-card-title{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.insight-page{margin-bottom:72px}
-.insight-page-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--black);margin-bottom:4px}
-.insight-page-title span{font-size:0.75rem;font-family:'DM Sans',sans-serif;color:var(--gray-mid);font-weight:400}
-.data-source{font-size:0.72rem;color:var(--gray-light);letter-spacing:0.05em;margin-bottom:28px;display:flex;align-items:center;gap:6px}
-.data-source::before{content:'';width:16px;height:1px;background:var(--accent);flex-shrink:0}
-.mkt-item{margin-bottom:18px}
-.mkt-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
-.mkt-name{font-size:0.82rem;font-weight:500;color:var(--black)}
-.mkt-yoy{font-size:0.72rem;font-weight:500;padding:2px 7px;border-radius:2px}
-.yoy-neg{background:rgba(220,60,60,0.1);color:#c0392b}
-.yoy-pos{background:rgba(39,174,96,0.1);color:#27ae60}
-.mkt-bar-wrap{background:#f0f0ec;height:28px;position:relative;overflow:hidden}
-.mkt-bar-fill{height:100%;display:flex;align-items:center;padding-left:12px}
-.mkt-bar-val{font-size:0.78rem;font-weight:500;color:var(--white)}
-.mkt-sub{font-size:0.7rem;color:var(--gray-mid);margin-top:4px}
-.mkt-sub em{color:var(--accent);font-style:normal}
-.donut-wrap{display:flex;gap:20px;align-items:center}
-.donut-legend{flex:1;display:flex;flex-direction:column;gap:8px}
-.dl-item{display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--gray-dark)}
-.dl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.dl-pct{margin-left:auto;font-weight:500;color:var(--black);font-size:0.82rem}
-.ai-insights{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ai-item{background:#f8f7f3;padding:18px 20px;border-left:3px solid transparent}
-.ai-item.alert{border-color:#e74c3c}
-.ai-item.growth{border-color:#27ae60}
-.ai-item.premium{border-color:#9b59b6}
-.ai-item.diff{border-color:var(--accent)}
-.ai-item-title{font-size:0.78rem;font-weight:500;color:var(--black);margin-bottom:6px}
-.ai-item-body{font-size:0.78rem;color:var(--gray-dark);line-height:1.6}
-.stacked-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-.stacked-row-label{font-size:0.72rem;color:var(--gray-dark);width:72px;text-align:right;flex-shrink:0}
-.stacked-track{flex:1;height:20px;display:flex;overflow:hidden}
-.seg{display:flex;align-items:center;justify-content:center;font-size:0.62rem;color:var(--white);font-weight:500}
-.legend-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
-.legend-pill{display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)}
-.legend-swatch{width:10px;height:10px;border-radius:1px;flex-shrink:0}
-.stacked-section{margin-bottom:16px}
-.stacked-section-label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-mid);margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.stacked-section-label::before{content:'';width:10px;height:2px;background:var(--accent)}
-.hm-table{width:100%;border-collapse:collapse;font-size:0.75rem}
-.hm-table th{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-mid);padding:6px 8px;font-weight:400;text-align:center}
-.hm-table td{padding:7px 8px;text-align:center;font-weight:500}
-.hm-table td:first-child{text-align:left;color:var(--gray-dark);font-weight:400}
-.hm-low{background:#f0f0ec;color:var(--gray-mid)}
-.hm-mid{background:rgba(200,169,110,0.25);color:#8a6e30}
-.hm-high{background:rgba(200,169,110,0.65);color:#5a4010}
-.hm-dom{background:var(--accent);color:var(--white)}
-.hm-grow{background:rgba(39,174,96,0.25);color:#1a7a43}
-.hm-dash{color:#ccc;background:#fafaf8}
-.section-divider{height:1px;background:rgba(0,0,0,0.06);margin:48px 0}
-@media(max-width:900px){.ig-grid-3,.ig-grid-2,.ig-grid-12{grid-template-columns:1fr}.ai-insights{grid-template-columns:1fr}}
-</style>
-<div class="container">
-<div class="case-section-header fade-up">
-<div><p class="section-label">01 — Industry Insights</p><h2 class="case-section-title">行业洞察</h2></div>
-</div>
+    <!-- 导航栏：新增汉堡菜单 -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">万子嘉</a>
+            <!-- 汉堡菜单按钮 -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- 导航链接 -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">首页</a></li>
+                <li><a href="#industry-insights">行业洞察</a></li>
+                <li><a href="#category-planning">战略规划</a></li>
+                <li><a href="#sales-data-analysis">销售分析</a></li>
+                <li><a href="#about">关于我</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="insight-page fade-up">
-<div class="insight-page-title">2025 运动户外内搭行业分析 <span>Sports &amp; Outdoor Inner Industry Analysis</span></div>
-<div class="data-source">数据来源：天猫 2025年9—11月 MT/HD/TR/TS Top100品牌 · Top500产品</div>
-<div class="ig-grid-3">
-<div class="ig-card">
-<div class="ig-card-title">市场规模对比 · Market Size</div>
-<div class="mkt-item">
-<div class="mkt-label"><span class="mkt-name">运动卫衣 Sports Sweatshirt</span><span class="mkt-yoy yoy-neg">YOY -29%</span></div>
-<div class="mkt-bar-wrap"><div class="mkt-bar-fill" style="width:100%;background:#c0a0d0"><span class="mkt-bar-val">781.6 M</span></div></div>
-<div class="mkt-sub">关键增长：Descente <em>+198%</em>，On <em>+117%</em></div>
-</div>
-<div class="mkt-item">
-<div class="mkt-label"><span class="mkt-name">运动T恤 Sports T-shirt</span><span class="mkt-yoy yoy-neg">YOY -30%</span></div>
-<div class="mkt-bar-wrap"><div class="mkt-bar-fill" style="width:64%;background:#8080c8"><span class="mkt-bar-val">502.5 M</span></div></div>
-<div class="mkt-sub">关键增长：Wilson <em>+109%</em>，Lulu <em>+57%</em></div>
-</div>
-<div class="mkt-item">
-<div class="mkt-label"><span class="mkt-name">户外T恤 Outdoor T-shirt</span><span class="mkt-yoy yoy-pos">YOY +32%</span></div>
-<div class="mkt-bar-wrap"><div class="mkt-bar-fill" style="width:34%;background:#6abf7a"><span class="mkt-bar-val">269.3 M</span></div></div>
-<div class="mkt-sub">关键增长：TOP20 均值 <em>+41%</em></div>
-</div>
-</div>
+    <!-- 英雄区 -->
+    <section id="hero">
+        <div class="hero-bg-text">MD</div>
+        <div class="hero-inner fade-up">
+            <p class="hero-eyebrow">Merchandise Planning Portfolio</p>
+            <h1 class="hero-title">商品企划<br><em>作品集</em></h1>
+            <p class="hero-sub">万子嘉 · 东华大学</p>
+            <p class="hero-desc">本作品集展示了我在商品企划领域的实践案例，包括行业洞察、战略规划以及销售数据分析。通过数据与策略结合，探索产品成功的逻辑。</p>
+            <a href="#portfolio" class="btn-primary">
+                查看作品
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
 
-<div class="ig-card">
-<div class="ig-card-title">运动卫衣 TOP 10 · 781.6 M</div>
-<div class="donut-wrap">
-<svg width="110" height="110" viewBox="0 0 110 110">
-<circle cx="55" cy="55" r="42" fill="none" stroke="#f0f0ec" stroke-width="18"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#c8a96e" stroke-width="18" stroke-dasharray="59.6 204.2" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#9b8ec4" stroke-width="18" stroke-dasharray="46.6 216.8" stroke-dashoffset="-59.6" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#e8796a" stroke-width="18" stroke-dasharray="46.3 217.1" stroke-dashoffset="-106.2" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#5aade8" stroke-width="18" stroke-dasharray="28.8 234.6" stroke-dashoffset="-152.5" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#f0b429" stroke-width="18" stroke-dasharray="28.5 235.1" stroke-dashoffset="-181.3" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#ddd" stroke-width="18" stroke-dasharray="53.5 210.1" stroke-dashoffset="-209.8" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="36" fill="white"/>
-<text x="55" y="51" text-anchor="middle" font-size="9" fill="#888" font-family="DM Sans,sans-serif">Total</text>
-<text x="55" y="63" text-anchor="middle" font-size="10" fill="#222" font-weight="600" font-family="DM Sans,sans-serif">781.6M</text>
-</svg>
-<div class="donut-legend">
-<div class="dl-item"><div class="dl-dot" style="background:#c8a96e"></div>FILA<span class="dl-pct">22.6%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#9b8ec4"></div>LULULEMON<span class="dl-pct">17.7%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#e8796a"></div>DESCENTE<span class="dl-pct">17.6%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#5aade8"></div>LI-NING<span class="dl-pct">10.9%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#f0b429"></div>ADIDAS<span class="dl-pct">10.8%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#ddd"></div>Others<span class="dl-pct">20.4%</span></div>
-</div>
-</div>
-</div>
+    <!-- 作品集核心能力 -->
+    <section id="portfolio">
+        <div class="container">
+            <p class="section-label">核心能力</p>
+            <h2 class="portfolio-title">三大维度，构建商品企划实践案例</h2>
+            <div class="portfolio-grid">
+                <div class="p-card" onclick="document.querySelector('#industry-insights').scrollIntoView({behavior:'smooth'})">
+                    <div class="p-card-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p-card-num">01</div>
+                    <h3 class="p-card-title">行业洞察</h3>
+                    <p class="p-card-desc">研究市场品牌竞争格局，分析产品定位、价格策略与设计趋势。</p>
+                    <div class="p-card-arrow">
+                        查看案例 
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-card" onclick="document.querySelector('#category-planning').scrollIntoView({behavior:'smooth'})">
+                    <div class="p-card-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect x="3" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="11" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="3" y="11" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="11" y="11" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="p-card-num">02</div>
+                    <h3 class="p-card-title">战略规划</h3>
+                    <p class="p-card-desc">基于市场需求与品牌定位，进行产品结构规划与系列设计。</p>
+                    <div class="p-card-arrow">
+                        查看案例 
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-card" onclick="document.querySelector('#sales-data-analysis').scrollIntoView({behavior:'smooth'})">
+                    <div class="p-card-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 15l4-5 4 2 6-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p-card-num">03</div>
+                    <h3 class="p-card-title">销售数据分析</h3>
+                    <p class="p-card-desc">通过数据分析销售表现，识别爆款机会与优化产品结构。</p>
+                    <div class="p-card-arrow">
+                        查看案例 
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="ig-card">
-<div class="ig-card-title">运动T恤 TOP 11 · 502.5 M</div>
-<div class="donut-wrap">
-<svg width="110" height="110" viewBox="0 0 110 110">
-<circle cx="55" cy="55" r="42" fill="none" stroke="#f0f0ec" stroke-width="18"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#c8a96e" stroke-width="18" stroke-dasharray="65.1 198.7" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#9b8ec4" stroke-width="18" stroke-dasharray="37.0 226.8" stroke-dashoffset="-65.1" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#5aade8" stroke-width="18" stroke-dasharray="18.8 245.0" stroke-dashoffset="-102.1" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#f0b429" stroke-width="18" stroke-dasharray="15.8 248.0" stroke-dashoffset="-120.9" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="42" fill="none" stroke="#ddd" stroke-width="18" stroke-dasharray="122.2 141.6" stroke-dashoffset="-136.7" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="36" fill="white"/>
-<text x="55" y="51" text-anchor="middle" font-size="9" fill="#888" font-family="DM Sans,sans-serif">Total</text>
-<text x="55" y="63" text-anchor="middle" font-size="10" fill="#222" font-weight="600" font-family="DM Sans,sans-serif">502.5M</text>
-</svg>
-<div class="donut-legend">
-<div class="dl-item"><div class="dl-dot" style="background:#c8a96e"></div>FILA<span class="dl-pct">24.7%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#9b8ec4"></div>LULULEMON<span class="dl-pct">14.1%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#5aade8"></div>ANTA<span class="dl-pct">7.2%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#f0b429"></div>ADIDAS<span class="dl-pct">6.0%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#ddd"></div>Others<span class="dl-pct">48.0%</span></div>
-</div>
-</div>
-</div>
-</div>
+    <!-- 行业洞察 -->
+    <section id="industry-insights">
+        <div class="container">
+            <div class="case-section-header fade-up">
+                <div>
+                    <p class="section-label">01 — Industry Insights</p>
+                    <h2 class="case-section-title">行业洞察</h2>
+                </div>
+            </div>
 
-<div class="ig-card" style="padding:24px 28px">
-<div class="ig-card-title" style="margin-bottom:18px">AI Market Insights</div>
-<div class="ai-insights">
-<div class="ai-item alert"><div class="ai-item-title">⚠ 市场收缩预警</div><div class="ai-item-body">核心运动品类面临严峻压力（卫衣 -29%，T恤 -30%），市场竞争已从"扩张期"转入"整合期"。</div></div>
-<div class="ai-item growth"><div class="ai-item-title">↗ 寡头格局加剧</div><div class="ai-item-body">FILA 同时主导两大品类（22.6% 与 24.7%），TOP3 品牌合计超 50% 市场份额，后进品牌入场壁垒持续抬高。</div></div>
-<div class="ai-item premium"><div class="ai-item-title">💎 高端韧性</div><div class="ai-item-body">整体下行背景下，高端性能品牌逆势爆发：Descente +198%，Lululemon +57%，验证高端定位的长期价值。</div></div>
-<div class="ai-item diff"><div class="ai-item-title">✦ 差异化生存</div><div class="ai-item-body">存量市场中正面硬刚风险极高，品牌应聚焦瑜伽、训练等细分功能场景，规避 FILA 大众市场的碾压效应。</div></div>
-</div>
-</div>
-</div>
+            <div class="insight-page fade-up">
+                <div class="insight-page-title">2025 运动户外内搭行业分析 <span>Sports &amp; Outdoor Inner Industry Analysis</span></div>
+                <div class="data-source">数据来源：天猫 2025年9—11月 MT/HD/TR/TS Top100品牌 · Top500产品</div>
+                <div class="ig-grid-3">
+                    <div class="ig-card">
+                        <div class="ig-card-title">市场规模对比 · Market Size</div>
+                        <div class="mkt-item">
+                            <div class="mkt-label">
+                                <span class="mkt-name">运动卫衣 Sports Sweatshirt</span>
+                                <span class="mkt-yoy yoy-neg">YOY -29%</span>
+                            </div>
+                            <div class="mkt-bar-wrap">
+                                <div class="mkt-bar-fill" style="width:100%;background:#c0a0d0">
+                                    <span class="mkt-bar-val">781.6 M</span>
+                                </div>
+                            </div>
+                            <div class="mkt-sub">关键增长：Descente <em>+198%</em>，On <em>+117%</em></div>
+                        </div>
+                        <div class="mkt-item">
+                            <div class="mkt-label">
+                                <span class="mkt-name">运动T恤 Sports T-shirt</span>
+                                <span class="mkt-yoy yoy-neg">YOY -30%</span>
+                            </div>
+                            <div class="mkt-bar-wrap">
+                                <div class="mkt-bar-fill" style="width:64%;background:#8080c8">
+                                    <span class="mkt-bar-val">502.5 M</span>
+                                </div>
+                            </div>
+                            <div class="mkt-sub">关键增长：Wilson <em>+109%</em>，Lulu <em>+57%</em></div>
+                        </div>
+                        <div class="mkt-item">
+                            <div class="mkt-label">
+                                <span class="mkt-name">户外T恤 Outdoor T-shirt</span>
+                                <span class="mkt-yoy yoy-pos">YOY +32%</span>
+                            </div>
+                            <div class="mkt-bar-wrap">
+                                <div class="mkt-bar-fill" style="width:34%;background:#6abf7a">
+                                    <span class="mkt-bar-val">269.3 M</span>
+                                </div>
+                            </div>
+                            <div class="mkt-sub">关键增长：TOP20 均值 <em>+41%</em></div>
+                        </div>
+                    </div>
 
-<div class="section-divider"></div>
+                    <div class="ig-card">
+                        <div class="ig-card-title">运动卫衣 TOP 10 · 781.6 M</div>
+                        <div class="donut-wrap">
+                            <svg width="110" height="110" viewBox="0 0 110 110">
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#f0f0ec" stroke-width="18"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#c8a96e" stroke-width="18" stroke-dasharray="59.6 204.2" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#9b8ec4" stroke-width="18" stroke-dasharray="46.6 216.8" stroke-dashoffset="-59.6" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#e8796a" stroke-width="18" stroke-dasharray="46.3 217.1" stroke-dashoffset="-106.2" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#5aade8" stroke-width="18" stroke-dasharray="28.8 234.6" stroke-dashoffset="-152.5" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#f0b429" stroke-width="18" stroke-dasharray="28.5 235.1" stroke-dashoffset="-181.3" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#ddd" stroke-width="18" stroke-dasharray="53.5 210.1" stroke-dashoffset="-209.8" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="36" fill="white"/>
+                                <text x="55" y="51" text-anchor="middle" font-size="9" fill="#888" font-family="DM Sans,sans-serif">Total</text>
+                                <text x="55" y="63" text-anchor="middle" font-size="10" fill="#222" font-weight="600" font-family="DM Sans,sans-serif">781.6M</text>
+                            </svg>
+                            <div class="donut-legend">
+                                <div class="dl-item"><div class="dl-dot" style="background:#c8a96e"></div>FILA<span class="dl-pct">22.6%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#9b8ec4"></div>LULULEMON<span class="dl-pct">17.7%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#e8796a"></div>DESCENTE<span class="dl-pct">17.6%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#5aade8"></div>LI-NING<span class="dl-pct">10.9%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#f0b429"></div>ADIDAS<span class="dl-pct">10.8%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#ddd"></div>Others<span class="dl-pct">20.4%</span></div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="insight-page fade-up" style="transition-delay:0.1s">
-<div class="insight-page-title">户外T恤品牌竞争格局 <span>Outdoor T-Shirt Industry Brands</span></div>
-<div class="data-source">数据来源：天猫 2025年9—11月 TR Top100品牌 · Top500产品</div>
-<div class="ig-grid-12">
-<div class="ig-card">
-<div class="ig-card-title">TOP 10 品牌份额</div>
-<div style="display:flex;flex-direction:column;gap:14px;align-items:center">
-<svg width="130" height="130" viewBox="0 0 130 130">
-<circle cx="65" cy="65" r="50" fill="none" stroke="#f0f0ec" stroke-width="22"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#6abf7a" stroke-width="22" stroke-dasharray="69.4 244.5" stroke-dashoffset="0" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#5aade8" stroke-width="22" stroke-dasharray="56.8 257.1" stroke-dashoffset="-69.4" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#c8a96e" stroke-width="22" stroke-dasharray="37.6 276.3" stroke-dashoffset="-126.2" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#9b8ec4" stroke-width="22" stroke-dasharray="34.1 279.8" stroke-dashoffset="-163.8" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#f0b429" stroke-width="22" stroke-dasharray="29.3 284.6" stroke-dashoffset="-197.9" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="50" fill="none" stroke="#ddd" stroke-width="22" stroke-dasharray="86.7 227.2" stroke-dashoffset="-227.2" transform="rotate(-90 65 65)"/>
-<circle cx="65" cy="65" r="43" fill="white"/>
-</svg>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;width:100%">
-<div class="dl-item"><div class="dl-dot" style="background:#6abf7a"></div>UTO<span class="dl-pct">22.1%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#5aade8"></div>Icebreaker<span class="dl-pct">18.1%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#c8a96e"></div>KOLON<span class="dl-pct">12.0%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#9b8ec4"></div>OUTOPIA<span class="dl-pct">10.9%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#f0b429"></div>SURPINE<span class="dl-pct">9.3%</span></div>
-<div class="dl-item"><div class="dl-dot" style="background:#ddd"></div>Others<span class="dl-pct">27.6%</span></div>
-</div>
-</div>
-</div>
+                    <div class="ig-card">
+                        <div class="ig-card-title">运动T恤 TOP 11 · 502.5 M</div>
+                        <div class="donut-wrap">
+                            <svg width="110" height="110" viewBox="0 0 110 110">
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#f0f0ec" stroke-width="18"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#c8a96e" stroke-width="18" stroke-dasharray="65.1 198.7" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#9b8ec4" stroke-width="18" stroke-dasharray="37.0 226.8" stroke-dashoffset="-65.1" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#5aade8" stroke-width="18" stroke-dasharray="18.8 245.0" stroke-dashoffset="-102.1" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#f0b429" stroke-width="18" stroke-dasharray="15.8 248.0" stroke-dashoffset="-120.9" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="42" fill="none" stroke="#ddd" stroke-width="18" stroke-dasharray="122.2 141.6" stroke-dashoffset="-136.7" transform="rotate(-90 55 55)"/>
+                                <circle cx="55" cy="55" r="36" fill="white"/>
+                                <text x="55" y="51" text-anchor="middle" font-size="9" fill="#888" font-family="DM Sans,sans-serif">Total</text>
+                                <text x="55" y="63" text-anchor="middle" font-size="10" fill="#222" font-weight="600" font-family="DM Sans,sans-serif">502.5M</text>
+                            </svg>
+                            <div class="donut-legend">
+                                <div class="dl-item"><div class="dl-dot" style="background:#c8a96e"></div>FILA<span class="dl-pct">24.7%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#9b8ec4"></div>LULULEMON<span class="dl-pct">14.1%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#5aade8"></div>ANTA<span class="dl-pct">7.2%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#f0b429"></div>ADIDAS<span class="dl-pct">6.0%</span></div>
+                                <div class="dl-item"><div class="dl-dot" style="background:#ddd"></div>Others<span class="dl-pct">48.0%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<div class="ig-card">
-<div class="ig-card-title">TOP 20 品牌排名 · YOY趋势</div>
-<div id="outdoor-bars"></div>
-<div style="margin-top:16px;padding:14px 16px;background:#f8f7f3;border-left:3px solid #6abf7a">
-<div style="font-size:0.72rem;font-weight:500;color:#1a7a43;margin-bottom:4px">⭐ 核心发现 · Merino Wool 制霸</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">Merino Wool T（含混纺）占全体户外T恤销售的 <strong>46%</strong>。天然纤维高溢价路线已成为户外T恤核心增长引擎，¥649—¥999 价格带形成竞争高地。</div>
-</div>
-</div>
-</div>
+                <div class="ig-card" style="padding:24px 28px; margin-top: 16px;">
+                    <div class="ig-card-title" style="margin-bottom:18px">AI Market Insights</div>
+                    <div class="ai-insights">
+                        <div class="ai-item alert">
+                            <div class="ai-item-title">⚠ 市场收缩预警</div>
+                            <div class="ai-item-body">核心运动品类面临严峻压力（卫衣 -29%，T恤 -30%），市场竞争已从"扩张期"转入"整合期"。</div>
+                        </div>
+                        <div class="ai-item growth">
+                            <div class="ai-item-title">↗ 寡头格局加剧</div>
+                            <div class="ai-item-body">FILA 同时主导两大品类（22.6% 与 24.7%），TOP3 品牌合计超 50% 市场份额，后进品牌入场壁垒持续抬高。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="ig-grid-3">
-<div class="ig-card">
-<div class="ig-card-title">ICEBREAKER TOP3</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
-<span style="background:rgba(90,173,232,0.12);color:#2980b9;font-size:0.65rem;padding:2px 7px">Merino Wool 100%</span>
-<span style="background:rgba(39,174,96,0.12);color:#27ae60;font-size:0.65rem;padding:2px 7px">Antibacterial</span>
-<span style="background:#f0f0ec;color:#666;font-size:0.65rem;padding:2px 7px">Quick Dry</span>
-</div>
-<table style="width:100%;font-size:0.75rem;border-collapse:collapse">
-<tr style="border-bottom:1px solid #f0f0ec"><th style="text-align:left;padding:4px 0;color:var(--gray-mid);font-weight:400">产品</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">销量</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">单价</th></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">Merino 经典款</td><td style="text-align:right">11,215 pcs</td><td style="text-align:right;color:var(--accent)">¥649</td></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">Merino 女款</td><td style="text-align:right">9,664 pcs</td><td style="text-align:right;color:var(--accent)">¥649</td></tr>
-<tr><td style="padding:5px 0">Merino 高端款</td><td style="text-align:right">3,294 pcs</td><td style="text-align:right;color:var(--accent)">¥999</td></tr>
-</table>
-</div>
-<div class="ig-card">
-<div class="ig-card-title">OUTOPIA TOP3</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
-<span style="background:rgba(155,142,196,0.15);color:#6c5fc7;font-size:0.65rem;padding:2px 7px">Merino Mix</span>
-<span style="background:rgba(39,174,96,0.12);color:#27ae60;font-size:0.65rem;padding:2px 7px">Cooling</span>
-<span style="background:#f0f0ec;color:#666;font-size:0.65rem;padding:2px 7px">Quick Dry</span>
-</div>
-<table style="width:100%;font-size:0.75rem;border-collapse:collapse">
-<tr style="border-bottom:1px solid #f0f0ec"><th style="text-align:left;padding:4px 0;color:var(--gray-mid);font-weight:400">产品</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">销量</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">单价</th></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">混纺速干款</td><td style="text-align:right">15,226 pcs</td><td style="text-align:right;color:var(--accent)">¥699</td></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">女款清凉款</td><td style="text-align:right">8,890 pcs</td><td style="text-align:right;color:var(--accent)">¥549</td></tr>
-<tr><td style="padding:5px 0">功能款</td><td style="text-align:right">5,421 pcs</td><td style="text-align:right;color:var(--accent)">¥799</td></tr>
-</table>
-</div>
-<div class="ig-card">
-<div class="ig-card-title">SN TOP3</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
-<span style="background:rgba(90,173,232,0.12);color:#2980b9;font-size:0.65rem;padding:2px 7px">Merino Wool 100%</span>
-<span style="background:#f0f0ec;color:#666;font-size:0.65rem;padding:2px 7px">Quick Dry</span>
-<span style="background:rgba(39,174,96,0.12);color:#27ae60;font-size:0.65rem;padding:2px 7px">Moisture-Wicking</span>
-</div>
-<table style="width:100%;font-size:0.75rem;border-collapse:collapse">
-<tr style="border-bottom:1px solid #f0f0ec"><th style="text-align:left;padding:4px 0;color:var(--gray-mid);font-weight:400">产品</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">销量</th><th style="text-align:right;padding:4px 0;color:var(--gray-mid);font-weight:400">单价</th></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">Merino 基础款</td><td style="text-align:right">4,821 pcs</td><td style="text-align:right;color:var(--accent)">¥749</td></tr>
-<tr style="border-bottom:1px solid #f8f8f8"><td style="padding:5px 0">轻薄速干款</td><td style="text-align:right">1,205 pcs</td><td style="text-align:right;color:var(--accent)">¥699</td></tr>
-<tr><td style="padding:5px 0">吸湿排汗款</td><td style="text-align:right">1,055 pcs</td><td style="text-align:right;color:var(--accent)">¥699</td></tr>
-</table>
-</div>
-</div>
-</div>
+    <!-- 新增：未完成区块的占位提示（可选） -->
+    <section id="category-planning" style="padding: 100px 5vw; background: var(--card-bg);">
+        <div class="container fade-up">
+            <p class="section-label">02 — Category Planning</p>
+            <h2 class="case-section-title">战略规划</h2>
+            <p style="color: var(--gray-dark); margin-top: 24px;">该板块内容正在完善中，敬请期待...</p>
+        </div>
+    </section>
 
-<div class="section-divider"></div>
+    <section id="sales-data-analysis" style="padding: 100px 5vw;">
+        <div class="container fade-up">
+            <p class="section-label">03 — Sales Data Analysis</p>
+            <h2 class="case-section-title">销售数据分析</h2>
+            <p style="color: var(--gray-dark); margin-top: 24px;">该板块内容正在完善中，敬请期待...</p>
+        </div>
+    </section>
 
-<div class="insight-page fade-up" style="transition-delay:0.15s">
-<div class="insight-page-title">品牌对比：品类 × 季节 × 性别 <span>Brand Comparison: Category x Season x Gender</span></div>
-<div class="data-source">数据来源：天猫 2025年9—11月 MT/HD/TR/TS Top100品牌 · Top500产品</div>
-<div class="ig-grid-3">
-<div class="ig-card">
-<div class="ig-card-title">品类结构 · Category Mix</div>
-<div class="legend-row">
-<div class="legend-pill"><div class="legend-swatch" style="background:#5aade8"></div>HD</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#9b8ec4"></div>MT</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#6abf7a"></div>TR</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#f0b429"></div>TS</div>
-</div>
-<div id="cat-mix-bars"></div>
-</div>
-<div class="ig-card">
-<div class="ig-card-title">季节结构 · Seasonality</div>
-<div class="stacked-section">
-<div class="stacked-section-label">卫衣 Sweatshirts</div>
-<div class="legend-row" style="margin-bottom:10px">
-<div class="legend-pill"><div class="legend-swatch" style="background:#5aade8"></div>冬季</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#f0a0a0"></div>秋季</div>
-</div>
-<div id="season-sw-bars"></div>
-</div>
-<div class="stacked-section" style="margin-top:16px">
-<div class="stacked-section-label">T恤 T-Shirts</div>
-<div id="season-ts-bars"></div>
-</div>
-</div>
-<div class="ig-card">
-<div class="ig-card-title">性别结构 · Gender</div>
-<div class="legend-row">
-<div class="legend-pill"><div class="legend-swatch" style="background:#5aade8"></div>男</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#f0a0a0"></div>女</div>
-<div class="legend-pill"><div class="legend-swatch" style="background:#6abf7a"></div>中性</div>
-</div>
-<div class="stacked-section"><div class="stacked-section-label">卫衣</div><div id="gender-sw-bars"></div></div>
-<div class="stacked-section" style="margin-top:12px"><div class="stacked-section-label">T恤</div><div id="gender-ts-bars"></div></div>
-</div>
-</div>
-<div class="ig-grid-3" style="margin-top:12px">
-<div class="ig-card" style="border-top:3px solid var(--accent)">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-<div style="font-size:0.78rem;font-weight:500;color:var(--black)">MT 高度集中</div>
-<span style="font-size:0.68rem;background:rgba(200,169,110,0.15);color:#8a6e30;padding:2px 6px">TS 19%</span>
-</div>
-<div style="font-size:0.78rem;color:var(--gray-dark);line-height:1.6">MLB 圆领款高效但覆盖面窄。与行业 TS 均值（32%）相比，仍有显著提升空间，建议扩大休闲 TR 品类布局。</div>
-</div>
-<div class="ig-card" style="border-top:3px solid #5aade8">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-<div style="font-size:0.78rem;font-weight:500;color:var(--black)">冬季空白缺口</div>
-<span style="font-size:0.68rem;background:rgba(90,173,232,0.15);color:#2980b9;padding:2px 6px">Winter 10%</span>
-</div>
-<div style="font-size:0.78rem;color:var(--gray-dark);line-height:1.6">MLB 冬季份额（12%）远低于 LULULEMON（70%）和 NIKE（59%），完全缺失高客单冬季营收窗口。</div>
-</div>
-<div class="ig-card" style="border-top:3px solid #f0a0a0">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-<div style="font-size:0.78rem;font-weight:500;color:var(--black)">性别极化现象</div>
-<span style="font-size:0.68rem;background:rgba(240,160,160,0.2);color:#c0392b;padding:2px 6px">Women 10%</span>
-</div>
-<div style="font-size:0.78rem;color:var(--gray-dark);line-height:1.6">MLB 中性策略 T恤达 95%，卫衣 88%。NIKE 男装精准定位（65-88%）、LULULEMON 女装定位（50-76%）更具竞争优势。</div>
-</div>
-</div>
-</div>
+    <section id="about" style="padding: 100px 5vw; background: var(--black); color: var(--white);">
+        <div class="container fade-up">
+            <p class="section-label" style="color: rgba(255,255,255,0.35);">About Me</p>
+            <h2 class="case-section-title" style="color: var(--white);">关于我</h2>
+            <p style="color: rgba(255,255,255,0.6); margin-top: 24px; max-width: 600px;">
+                万子嘉，东华大学商品企划专业，专注于运动服饰领域的商品企划与数据分析。擅长通过市场洞察与数据驱动，构建高效的产品策略体系。
+            </p>
+        </div>
+    </section>
 
-<div class="section-divider"></div>
+    <!-- JavaScript 升级：滚动动画 + 汉堡菜单 + 交互优化 -->
+    <script>
+        // 1. 汉堡菜单交互
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = navLinks.querySelectorAll('a');
 
-<div class="insight-page fade-up" style="transition-delay:0.2s">
-<div class="insight-page-title">卫衣多维交叉分析：性别 × 版型 × 衣长 <span>SWEATSHIRT Cross Analysis: Gender x Fit x Length</span></div>
-<div class="data-source">数据来源：天猫 2025年9—11月 MT Top100品牌 · Top500产品</div>
-<div class="ig-grid-2">
-<div class="ig-card">
-<div class="ig-card-title">版型策略热力图 · Fit Strategy</div>
-<div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:14px">Sales Volume</div>
-<table class="hm-table" style="margin-bottom:16px">
-<tr><th></th><th>SLIM</th><th>COMF.</th><th>LOOSE</th><th>OVER</th></tr>
-<tr><td>MEN</td><td class="hm-low">Low</td><td class="hm-high">High</td><td class="hm-dash">—</td><td class="hm-mid">Med</td></tr>
-<tr><td>UNISEX</td><td class="hm-dash">—</td><td class="hm-low">Low</td><td class="hm-dash">—</td><td class="hm-dom">Dominant</td></tr>
-<tr><td>WOMEN</td><td class="hm-high">High</td><td class="hm-mid">Med</td><td class="hm-high">High</td><td class="hm-grow">Growth</td></tr>
-</table>
-<div style="padding:14px 16px;background:#f0fff4;border-left:3px solid #27ae60">
-<div style="font-size:0.72rem;font-weight:500;color:#1a7a43;margin-bottom:4px">交叉分析洞察</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">行业女装 Loose 版型占比 10.8%，而 MLB 女装无此版型。女装 Slim Fit 行业 8.6%，MLB 5.8%。男装市场两极分化，MLB 主要贡献在中性超大廓形。</div>
-</div>
-</div>
-<div class="ig-card">
-<div class="ig-card-title">衣长策略热力图 · Length Strategy</div>
-<div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:14px">Volume Hotspots</div>
-<table class="hm-table" style="margin-bottom:16px">
-<tr><th></th><th>CROP</th><th>REGULAR</th><th>OVER/LONG</th></tr>
-<tr><td>MEN</td><td class="hm-dash">—</td><td class="hm-high">High</td><td class="hm-mid">Med</td></tr>
-<tr><td>UNISEX</td><td class="hm-dash">—</td><td class="hm-low">Low</td><td class="hm-dom">Dominant</td></tr>
-<tr><td>WOMEN</td><td class="hm-grow">Growth</td><td class="hm-high">High</td><td class="hm-low">Low</td></tr>
-</table>
-<div style="padding:14px 16px;background:#fffbf0;border-left:3px solid var(--accent)">
-<div style="font-size:0.72rem;font-weight:500;color:#8a6e30;margin-bottom:4px">极化增长策略</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">男装聚焦常规衣长，中性跟进超长款。女装 Crop 款是增长热点，竞品已推出女装 Semi-Crop，这正是 MLB <strong>当前缺失、亟待布局</strong>的细分机会。</div>
-</div>
-</div>
-</div>
-</div>
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            // 切换body滚动锁定
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
 
-</div>
-</section>
-<div class="divider"></div>
+        // 点击导航项关闭汉堡菜单
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
 
-<section id="category-planning" style="background:#f4f3ef;padding:100px 40px">
-<style>
-.sp-page{margin-bottom:72px}
-.sp-page-title{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--black);margin-bottom:4px}
-.sp-page-title span{font-size:0.75rem;font-family:'DM Sans',sans-serif;color:var(--gray-mid);font-weight:400}
-.sp-source{font-size:0.72rem;color:var(--gray-light);letter-spacing:0.05em;margin-bottom:28px;display:flex;align-items:center;gap:6px}
-.sp-source::before{content:'';width:16px;height:1px;background:var(--accent);flex-shrink:0}
-.sp-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.sp-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
-.sp-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
-.sp-card{background:var(--white);border:1px solid rgba(0,0,0,0.06);padding:24px 22px}
-.sp-card-title{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.sp-kpi-row{display:flex;gap:12px;margin-bottom:16px}
-.sp-kpi{flex:1;padding:16px;background:#f8f7f3;border-top:2px solid var(--accent);text-align:center}
-.sp-kpi-val{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--black);line-height:1;margin-bottom:3px}
-.sp-kpi-label{font-size:0.68rem;color:var(--gray-mid);letter-spacing:0.05em}
-.sp-kpi.highlight{border-top-color:#27ae60}
-.sp-kpi.warn{border-top-color:#e74c3c}
-.sp-bar-group{margin-bottom:12px}
-.sp-bar-label{font-size:0.72rem;color:var(--gray-dark);margin-bottom:4px;display:flex;justify-content:space-between}
-.sp-bar-wrap{display:flex;gap:4px;align-items:flex-end;height:80px;margin-bottom:4px}
-.sp-bar-item{display:flex;flex-direction:column;align-items:center;flex:1;gap:3px}
-.sp-bar{width:100%;transition:opacity 0.2s}
-.sp-bar:hover{opacity:0.8}
-.sp-bar-val{font-size:0.65rem;color:var(--gray-mid)}
-.sp-bar-x{font-size:0.65rem;color:var(--gray-light);margin-top:2px}
-.sp-rec{padding:14px 16px;border-left:3px solid transparent;background:#fafaf8;margin-bottom:8px}
-.sp-rec.add{border-color:#27ae60}
-.sp-rec.warn{border-color:#e74c3c}
-.sp-rec.shift{border-color:var(--accent)}
-.sp-rec.info{border-color:#5aade8}
-.sp-rec-title{font-size:0.78rem;font-weight:500;color:var(--black);margin-bottom:4px}
-.sp-rec-body{font-size:0.75rem;color:var(--gray-dark);line-height:1.6}
-.sp-tag{display:inline-block;font-size:0.64rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;margin-right:4px;margin-bottom:4px}
-.sp-tag.green{background:rgba(39,174,96,0.12);color:#27ae60}
-.sp-tag.red{background:rgba(231,76,60,0.12);color:#c0392b}
-.sp-tag.gold{background:rgba(200,169,110,0.18);color:#8a6e30}
-.sp-tag.blue{background:rgba(90,173,232,0.15);color:#2980b9}
-.sp-change-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:8px 12px;background:#fafaf8}
-.sp-change-brand{font-size:0.75rem;font-weight:500;color:var(--black);width:88px;flex-shrink:0}
-.sp-change-from{font-size:0.75rem;color:var(--gray-mid)}
-.sp-change-arrow{color:var(--accent);font-size:0.85rem}
-.sp-change-to{font-size:0.75rem;font-weight:500}
-.sp-change-to.up{color:#27ae60}
-.sp-change-to.down{color:#e74c3c}
-.sp-section-div{height:1px;background:rgba(0,0,0,0.06);margin:48px 0}
-@media(max-width:900px){.sp-grid-2,.sp-grid-3,.sp-grid-4{grid-template-columns:1fr}}
-</style>
-<div class="container">
-<div class="case-section-header fade-up">
-<div><p class="section-label">02 — Strategic Planning</p><h2 class="case-section-title">战略规划</h2></div>
-</div>
+        // 2. 滚动动画：IntersectionObserver 监听元素可见性
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observerOptions = {
+            threshold: 0.1, // 元素进入视口10%时触发
+            rootMargin: '0px 0px -50px 0px' // 底部偏移，避免过早触发
+        };
 
-<!-- ══ SWEATSHIRT 26F UPDATE ══ -->
-<div class="sp-page fade-up">
-<div class="sp-page-title">卫衣 26F 上新策略更新 <span>SWEATSHIRT – 26F UPDATE</span></div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // 仅触发一次
+                }
+            });
+        }, observerOptions);
 
+        fadeElements.forEach(el => observer.observe(el));
 
-<!-- KPI row -->
-<div class="sp-kpi-row">
-  <div class="sp-kpi"><div class="sp-kpi-val">72M</div><div class="sp-kpi-label">总销售额</div></div>
-  <div class="sp-kpi"><div class="sp-kpi-val">219</div><div class="sp-kpi-label">SKU数量</div></div>
-  <div class="sp-kpi highlight"><div class="sp-kpi-val">43%</div><div class="sp-kpi-label">Wellness 占比</div></div>
-  <div class="sp-kpi"><div class="sp-kpi-val">29%</div><div class="sp-kpi-label">Street 占比</div></div>
-  <div class="sp-kpi warn"><div class="sp-kpi-val">17%</div><div class="sp-kpi-label">Basic 占比</div></div>
-</div>
+        // 3. 导航栏滚动背景加深
+        const mainNav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNav.style.background = 'rgba(250, 250, 248, 0.98)';
+            } else {
+                mainNav.style.background = 'rgba(250, 250, 248, 0.95)';
+            }
+        });
 
-<div class="sp-grid-2">
-  <!-- Length Distribution -->
-  <div class="sp-card">
-    <div class="sp-card-title">衣长分布变化 · Length Distribution Shift</div>
-    <div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:12px">Short Length Declining → Regular Length Boom</div>
-    <div style="display:flex;gap:8px;margin-bottom:10px">
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#bbb;border-radius:1px"></div>25FW</div>
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#5aade8;border-radius:1px"></div>26FW</div>
-    </div>
-    <div id="len-dist-chart" style="display:flex;gap:16px;align-items:flex-end;height:100px;margin-bottom:12px"></div>
-    <div class="sp-rec shift">
-      <div class="sp-rec-title">↑ 女装：26FW 新增 Semi Crop 版型</div>
-      <div class="sp-rec-body">Semi Crop 占比从 14% 提升至 18%，Regular 稳步增长，Short 款持续萎缩，建议主推 Semi Crop 与 Regular 双线并行。</div>
-    </div>
-  </div>
-
-  <!-- Women's Fit Distribution -->
-  <div class="sp-card">
-    <div class="sp-card-title">女装版型分布变化 · Women's Fit Distribution Shift</div>
-    <div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:12px">Key Shift: Slim Rising</div>
-    <div style="display:flex;gap:8px;margin-bottom:10px">
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#bbb;border-radius:1px"></div>25FW</div>
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#e8796a;border-radius:1px"></div>26FW</div>
-    </div>
-    <div id="fit-dist-chart" style="display:flex;gap:16px;align-items:flex-end;height:100px;margin-bottom:12px"></div>
-    <div class="sp-rec add">
-      <div class="sp-rec-title">↑ 女装：向 Slim Fit 转型 + 新增 Loose Fit</div>
-      <div class="sp-rec-body">Slim 26FW 达 54%（+26pp），Comfortable 下滑至 12%，Loose 虽新增但 Semi Crop 中仍缺失，需补全 Loose × Semi Crop 组合。</div>
-    </div>
-  </div>
-</div>
-
-<div class="sp-grid-2">
-  <!-- Fabric Shift -->
-  <div class="sp-card">
-    <div class="sp-card-title">面料品类迁移 · Fabric Category Shift (25FW → 26FW)</div>
-    <table style="width:100%;border-collapse:collapse;font-size:0.78rem;margin-bottom:16px">
-      <tr style="border-bottom:1px solid #f0f0ec">
-        <th style="text-align:left;padding:6px 0;color:var(--gray-mid);font-weight:400;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase">面料</th>
-        <th style="text-align:center;padding:6px 8px;color:var(--gray-mid);font-weight:400;font-size:0.68rem">Unisex 25→26FW</th>
-        <th style="text-align:center;padding:6px 8px;color:var(--gray-mid);font-weight:400;font-size:0.68rem">Women 25→26FW</th>
-      </tr>
-      <tr style="border-bottom:1px solid #f8f8f8"><td style="padding:8px 0;font-weight:500">Terry</td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag red">45% → 33% ▼</span></td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag green">5% → 10% ▲</span></td></tr>
-      <tr style="border-bottom:1px solid #f8f8f8"><td style="padding:8px 0;font-weight:500">Double Knit</td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag green">1% → 3% ▲</span></td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag green">11% → 12% ▲</span></td></tr>
-      <tr style="border-bottom:1px solid #f8f8f8" style="background:#fff3f3">
-        <td style="padding:8px 0;font-weight:500;display:flex;align-items:center;gap:6px">Brushed <span style="color:#e74c3c;font-size:0.7rem">⚠ 缺失</span></td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag red">13% → 8% ▼</span></td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag red">1% → 1%</span></td></tr>
-      <tr><td style="padding:8px 0;font-weight:500">Jacquard</td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag green">5% → 7% ▲</span></td>
-        <td style="text-align:center;padding:8px"><span class="sp-tag green">1% → 2% ▲</span></td></tr>
-    </table>
-    <div class="sp-rec warn">
-      <div class="sp-rec-title">⚠ 中性款：Terry → Double Knit 面料迁移</div>
-      <div class="sp-rec-body">Terry 大幅下滑（-12pp），Double Knit 上升。Brushed 面料严重缺失，需补充 Brushed 品类以抢占秋冬保暖市场。</div>
-    </div>
-  </div>
-
-  <!-- Functional Distribution -->
-  <div class="sp-card">
-    <div class="sp-card-title">功能属性分布变化 · Functional Distribution Shift</div>
-    <div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:12px">Functional Rate: 22% → 25%</div>
-    <div id="func-dist-chart" style="margin-bottom:16px"></div>
-    <div class="sp-rec info">
-      <div class="sp-rec-title">功能率 22%→25%，仍需扩充功能面料</div>
-      <div class="sp-rec-body">非功能款虽仍主导（75%），但保暖功能款（Warmth）明显提升至 24%（+4pp）。Summer Tech 与 Water Repellent 占比极低（≤1%），建议重点扩充 Warmth 与轻薄功能面料线。</div>
-    </div>
-    <div style="margin-top:12px;padding:12px 14px;background:#f0fff4;border-left:3px solid #27ae60">
-      <div style="font-size:0.72rem;font-weight:500;color:#1a7a43;margin-bottom:6px">战略新增建议</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px">
-        <span style="background:#f0f0ec;color:var(--black);font-size:0.72rem;padding:4px 10px">TR: Stand Neck + 功能面料 + 弹力</span>
-        <span style="background:#f0f0ec;color:var(--black);font-size:0.72rem;padding:4px 10px">MT: CF 功能面料 + 弹力</span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="sp-section-div"></div>
-
-<!-- ══ TS 26F MATRIX ══ -->
-<div class="sp-page fade-up" style="transition-delay:0.1s">
-<div class="sp-page-title">TS 26F 产品矩阵规划 <span>TS – 26F MATRIX</span></div>
-
-
-<div class="sp-kpi-row">
-  <div class="sp-kpi"><div class="sp-kpi-val">53M</div><div class="sp-kpi-label">总销售额</div></div>
-  <div class="sp-kpi"><div class="sp-kpi-val">159</div><div class="sp-kpi-label">SKU数量</div></div>
-  <div class="sp-kpi highlight"><div class="sp-kpi-val">72%</div><div class="sp-kpi-label">功能款占比 26FW</div></div>
-  <div class="sp-kpi warn"><div class="sp-kpi-val">26%</div><div class="sp-kpi-label">功能款占比 25FW</div></div>
-  <div class="sp-kpi"><div class="sp-kpi-val">U:55%</div><div class="sp-kpi-label">中性/女装分配</div></div>
-</div>
-
-<div class="sp-grid-2">
-  <!-- Gender & Fit Rebalance -->
-  <div class="sp-card">
-    <div class="sp-card-title">性别与版型市场再平衡 · Gender &amp; Fit Market Rebalance</div>
-    <div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:6px">中性 79%→55% &nbsp;|&nbsp; 女装 21%→45%</div>
-    <div style="display:flex;gap:8px;margin-bottom:10px">
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#bbb;border-radius:1px"></div>25FW</div>
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#9b8ec4;border-radius:1px"></div>26FW</div>
-    </div>
-    <div id="gender-fit-chart" style="display:flex;gap:12px;align-items:flex-end;height:100px;margin-bottom:14px"></div>
-    <div class="sp-rec add">
-      <div class="sp-rec-title">扩充女装 Wellness 款式</div>
-      <div class="sp-rec-body">女装占比从 21% 跃升至 45%，中性款相应收缩。重点扩展 Unisex 舒适版型，同时加大 Feminine Wellness 与 Feminine Sportive 系列投入。</div>
-    </div>
-  </div>
-
-  <!-- Sleeve Length Dynamics -->
-  <div class="sp-card">
-    <div class="sp-card-title">袖长动态 · Sleeve Length Dynamics</div>
-    <div style="font-size:0.7rem;color:var(--gray-mid);margin-bottom:6px">Women LS: 2.9% → 15% &nbsp;|&nbsp; Market Split U:55% / W:45%</div>
-    <div style="display:flex;gap:8px;margin-bottom:10px">
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#bbb;border-radius:1px"></div>25FW</div>
-      <div style="display:flex;align-items:center;gap:5px;font-size:0.7rem;color:var(--gray-dark)"><div style="width:12px;height:3px;background:#6abf7a;border-radius:1px"></div>26FW</div>
-    </div>
-    <div id="sleeve-chart" style="display:flex;gap:12px;align-items:flex-end;height:100px;margin-bottom:14px"></div>
-    <div class="sp-rec add">
-      <div class="sp-rec-title">女装长袖从 2.9% 扩展至 15%</div>
-      <div class="sp-rec-body">LS（长袖）整体增长显著，女装 LS 爆发式增长。建议同步加入中性轻薄磨毛风格长袖，布局秋冬全场景防护需求。</div>
-    </div>
-  </div>
-</div>
-
-<div class="sp-grid-2">
-  <!-- Functional Revolution -->
-  <div class="sp-card">
-    <div class="sp-card-title">功能革命 · The Functional Revolution</div>
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-      <span style="font-size:0.75rem;font-weight:500;color:#9b8ec4">Functional Rate</span>
-      <span style="font-size:1.1rem;font-family:'DM Serif Display',serif;color:var(--black)">26% → 72%</span>
-      <span style="font-size:0.72rem;background:rgba(155,142,196,0.15);color:#6c5fc7;padding:2px 8px">+46pp</span>
-    </div>
-    <div id="func-rev-chart" style="display:flex;gap:12px;align-items:flex-end;height:110px;margin-bottom:14px"></div>
-    <div class="sp-rec info">
-      <div class="sp-rec-title">功能率 26% → 72%，需扩充功能类型</div>
-      <div class="sp-rec-body">UV-Protect（39%）与 Cool Touch（26%）成为两大核心功能，Quick Dry（7%）仍有增长空间。Warmth 品类极低，建议针对秋冬场景重点补充。</div>
-    </div>
-  </div>
-
-  <!-- Strategy Matrix -->
-  <div class="sp-card">
-    <div class="sp-card-title">26FW 策略矩阵 · Strategy Action Matrix</div>
-    <div class="sp-rec add" style="margin-bottom:8px">
-      <div class="sp-rec-title">+ 女装 Wool 面料（Regular 版型）</div>
-      <div class="sp-rec-body">户外品类新增，契合 Merino Wool 高端化趋势，补全 LUXURY × OUTDOOR 区间空白。</div>
-    </div>
-    <div class="sp-rec add" style="margin-bottom:8px">
-      <div class="sp-rec-title">+ 中性 Wool 面料（Comfortable / Over 版型）</div>
-      <div class="sp-rec-body">两个版型分别布局中等与宽松廓形，满足 Unisex 多元需求，与现有产品形成差异化。</div>
-    </div>
-    <div class="sp-rec shift" style="margin-bottom:8px">
-      <div class="sp-rec-title">↑ 女装 Wellness 扩张：Comfortable Crop 为核心</div>
-      <div class="sp-rec-body">Comfortable Crop 为女装 Wellness 入口款，搭配 SPAN 面料提升穿着舒适感，形成系列化视觉 IP。</div>
-    </div>
-    <div class="sp-rec warn">
-      <div class="sp-rec-title">⚠ 补充女装舒适版型 Tee（Comfortable Fit）</div>
-      <div class="sp-rec-body">现有 Unisex 版型覆盖不足，建议新增专属女装 Comfortable Fit T恤，填补 Wellness 场景产品缺口。</div>
-    </div>
-  </div>
-</div>
-</div>
-
-</div>
-</section>
-
-<script>
-(function(){
-// Length Distribution chart (25FW vs 26FW)
-var lenData=[
-  {x:'CROP',v25:49,v26:49,note:''},
-  {x:'SEMI CROP',v25:14,v26:18,note:'↑'},
-  {x:'REGULAR',v25:32,v26:32,note:''},
-  {x:'OVER',v25:5,v26:8,note:''}
-];
-var lel=document.getElementById('len-dist-chart');
-if(lel){lel.innerHTML=lenData.map(function(d){
-  var maxV=Math.max(d.v25,d.v26,1);
-  return '<div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:2px">'
-    +'<div style="width:100%;display:flex;gap:3px;align-items:flex-end;height:80px">'
-    +'<div style="flex:1;background:#ddd;height:'+(d.v25/60*80)+'px" title="25FW '+d.v25+'%"></div>'
-    +'<div style="flex:1;background:#5aade8;height:'+(d.v26/60*80)+'px" title="26FW '+d.v26+'%"></div>'
-    +'</div>'
-    +'<div style="font-size:0.62rem;color:var(--gray-mid);text-align:center;line-height:1.2">'+d.x+'</div>'
-    +(d.note?'<div style="font-size:0.65rem;color:#27ae60;font-weight:600">'+d.note+'</div>':'')
-    +'</div>';
-}).join('');}
-
-// Women's Fit chart
-var fitData=[
-  {x:'OVER',v25:2,v26:6},{x:'SLIM',v25:28,v26:54,up:true},{x:'COMFORTABLE',v25:71,v26:12,down:true},{x:'LOOSE',v25:0,v26:6}
-];
-var fel=document.getElementById('fit-dist-chart');
-if(fel){fel.innerHTML=fitData.map(function(d){
-  return '<div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:2px">'
-    +'<div style="width:100%;display:flex;gap:3px;align-items:flex-end;height:80px">'
-    +'<div style="flex:1;background:#ddd;height:'+(d.v25/75*80)+'px" title="25FW '+d.v25+'%"></div>'
-    +'<div style="flex:1;background:'+(d.up?'#e8796a':d.down?'#bbb':'#e8796a')+';height:'+(d.v26/75*80)+'px" title="26FW '+d.v26+'%"></div>'
-    +'</div>'
-    +'<div style="font-size:0.6rem;color:var(--gray-mid);text-align:center;line-height:1.2">'+d.x+'</div>'
-    +'</div>';
-}).join('');}
-
-// Functional Distribution Shift
-var fds=[
-  {x:'Non-Func',v25:78,v26:75,c:'#ddd'},{x:'WARMTH',v25:20,v26:24,c:'#6abf7a'},{x:'Summer Tech',v25:3,v26:0,c:'#5aade8'},{x:'Water Repel',v25:0,v26:1,c:'#9b8ec4'}
-];
-var fdel=document.getElementById('func-dist-chart');
-if(fdel){
-  fdel.innerHTML='<div style="display:flex;gap:12px;align-items:flex-end;height:90px;margin-bottom:8px">'
-  +fds.map(function(d){
-    return '<div style="display:flex;flex-direction:column;align-items:center;flex:1">'
-      +'<div style="width:100%;display:flex;gap:3px;align-items:flex-end;height:80px">'
-      +'<div style="flex:1;background:#ddd;height:'+(d.v25/90*80)+'px" title="25FW '+d.v25+'%"><div style="font-size:0.6rem;color:#888;text-align:center;padding-top:2px">'+(d.v25>5?d.v25+'%':'')+'</div></div>'
-      +'<div style="flex:1;background:'+d.c+';height:'+(d.v26/90*80)+'px;opacity:0.85" title="26FW '+d.v26+'%"><div style="font-size:0.6rem;color:#555;text-align:center;padding-top:2px">'+(d.v26>5?d.v26+'%':'')+'</div></div>'
-      +'</div>'
-      +'<div style="font-size:0.6rem;color:var(--gray-mid);text-align:center;margin-top:3px;line-height:1.2">'+d.x+'</div>'
-      +'</div>';
-  }).join('')+'</div>'
-  +'<div style="display:flex;gap:12px;font-size:0.68rem;color:var(--gray-mid)"><span style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:#ddd"></div>25FW</span><span style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:#6abf7a"></div>26FW</span></div>';
-}
-
-// Gender & Fit chart for TS
-var gfData=[
-  {x:'Over',u25:79,u26:30,w25:3,w26:5},{x:'Comf',u25:2,u26:3,w25:2,w26:13},{x:'Loose',u25:0,u26:0,w25:0,w26:2},{x:'Mega',u25:7,u26:2,w25:0,w26:0},{x:'Slim',u25:0,u26:5,w25:10,w26:35},{x:'Comf(W)',u25:0,u26:5,w25:0,w26:5},{x:'Over(W)',u25:0,u26:0,w25:0,w26:5}
-];
-var gfel=document.getElementById('gender-fit-chart');
-if(gfel){gfel.innerHTML=gfData.slice(0,5).map(function(d){
-  var maxV=80;
-  return '<div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:2px">'
-    +'<div style="width:100%;display:flex;gap:2px;align-items:flex-end;height:80px">'
-    +'<div style="flex:1;background:#ddd;height:'+(d.u25/maxV*80)+'px" title="Uni 25FW '+d.u25+'%"></div>'
-    +'<div style="flex:1;background:#9b8ec4;height:'+(d.u26/maxV*80)+'px" title="Uni 26FW '+d.u26+'%"></div>'
-    +'<div style="flex:1;background:#f0a0a0;height:'+(d.w26/maxV*80)+'px" title="Women 26FW '+d.w26+'%"></div>'
-    +'</div>'
-    +'<div style="font-size:0.6rem;color:var(--gray-mid);text-align:center;line-height:1.2">'+d.x+'</div>'
-    +'</div>';
-}).join('');}
-
-// Sleeve Length chart
-var slData=[
-  {x:'LS (Women)',v25:2.9,v26:15,c:'#6abf7a',big:true},{x:'SS (Women)',v25:18.6,v26:30,c:'#6abf7a'},{x:'LS (Uni)',v25:19.3,v26:47,c:'#5aade8',big:true},{x:'SS (Uni)',v25:59.3,v26:8,c:'#5aade8'}
-];
-var slel=document.getElementById('sleeve-chart');
-if(slel){slel.innerHTML=slData.map(function(d){
-  return '<div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:2px">'
-    +'<div style="width:100%;display:flex;gap:3px;align-items:flex-end;height:80px">'
-    +'<div style="flex:1;background:#ddd;height:'+(d.v25/70*80)+'px" title="25FW '+d.v25+'%"></div>'
-    +'<div style="flex:1;background:'+d.c+';height:'+(d.v26/70*80)+'px;opacity:0.85" title="26FW '+d.v26+'%"></div>'
-    +'</div>'
-    +'<div style="font-size:0.6rem;color:var(--gray-mid);text-align:center;line-height:1.2">'+d.x+'</div>'
-    +(d.big?'<div style="font-size:0.6rem;color:#27ae60;font-weight:600">↑</div>':'')
-    +'</div>';
-}).join('');}
-
-// Functional Revolution chart
-var frData=[
-  {x:'Non-Func',v25:74.3,v26:28,c:'#ddd'},{x:'UV-Protect',v25:20,v26:39,c:'#9b8ec4'},{x:'Cool Touch',v25:2.1,v26:26,c:'#5aade8'},{x:'Warmth',v25:2.1,v26:7,c:'#6abf7a'},{x:'Quick Dry',v25:1.6,v26:3.6,c:'#f0b429'}
-];
-var frel=document.getElementById('func-rev-chart');
-if(frel){frel.innerHTML=frData.map(function(d){
-  return '<div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:2px">'
-    +'<div style="width:100%;display:flex;gap:3px;align-items:flex-end;height:90px">'
-    +'<div style="flex:1;background:#ddd;height:'+(d.v25/80*90)+'px" title="25FW '+d.v25+'%"></div>'
-    +'<div style="flex:1;background:'+d.c+';height:'+(d.v26/80*90)+'px;opacity:0.85" title="26FW '+d.v26+'%"></div>'
-    +'</div>'
-    +'<div style="font-size:0.6rem;color:var(--gray-mid);text-align:center;line-height:1.2">'+d.x+'</div>'
-    +'</div>';
-}).join('');}
-})();
-</script>
-
-<div class="divider"></div>
-
-<section id="sales-data-analysis" style="background:#f7f6f2;padding:100px 40px">
-<style>
-.dash-card{background:var(--white);border:1px solid rgba(0,0,0,0.06);padding:22px 20px}
-.dash-card-title{font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:16px}
-.kpi-box{background:var(--white);border:1px solid rgba(0,0,0,0.06);padding:18px 16px;border-top:3px solid var(--accent)}
-.kpi-box.g{border-top-color:#27ae60}
-.kpi-box.b{border-top-color:#5aade8}
-.kpi-val{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--black);line-height:1;margin-bottom:3px}
-.kpi-lbl{font-size:0.68rem;color:var(--gray-mid);letter-spacing:0.04em}
-.dash-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.dash-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
-.dash-grid-32{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-bottom:12px}
-.sku-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f4f4f2}
-.sku-row:last-child{border-bottom:none}
-.sku-rank{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--accent);width:22px;flex-shrink:0;text-align:right}
-.sku-rank.top3{color:var(--black)}
-.sku-code{font-size:0.72rem;color:var(--black);font-weight:500;width:86px;flex-shrink:0}
-.sku-domain{font-size:0.68rem;color:var(--gray-mid);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sku-bar-wrap{width:100px;height:8px;background:#f0f0ec;flex-shrink:0}
-.sku-bar-fill{height:100%;background:var(--accent);opacity:0.8}
-.sku-sales{font-size:0.72rem;font-weight:500;color:var(--black);width:44px;text-align:right;flex-shrink:0}
-.sku-st{font-size:0.68rem;color:var(--gray-mid);width:40px;text-align:right;flex-shrink:0}
-.st-row{display:flex;align-items:center;gap:8px;margin-bottom:9px}
-.st-label{font-size:0.72rem;color:var(--gray-dark);width:64px;text-align:right;flex-shrink:0}
-.st-track{flex:1;height:18px;background:#f0f0ec;overflow:hidden;position:relative}
-.st-fill{height:100%;display:flex;align-items:center;padding-left:6px}
-.st-fill-val{font-size:0.62rem;color:var(--white);font-weight:500}
-.st-pct{font-size:0.7rem;font-weight:500;color:var(--black);width:40px;text-align:right;flex-shrink:0}
-.wk-bar{display:flex;align-items:flex-end;gap:2px;height:80px}
-.wk-bar-item{flex:1;display:flex;flex-direction:column;align-items:center}
-.wk-b{width:100%;background:var(--accent);opacity:0.7;min-height:1px;transition:opacity 0.2s}
-.wk-b:hover{opacity:1}
-.wk-x{font-size:0.55rem;color:var(--gray-light);margin-top:2px;transform:rotate(-35deg);transform-origin:top left;white-space:nowrap}
-.st-bin-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.st-bin-label{font-size:0.72rem;color:var(--gray-dark);width:56px;flex-shrink:0}
-.st-bin-bar{flex:1;height:18px;background:#f0f0ec;overflow:hidden}
-.st-bin-fill{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
-.st-bin-fill span{font-size:0.62rem;color:var(--white);font-weight:500}
-.st-bin-count{font-size:0.7rem;color:var(--gray-mid);width:44px;text-align:right;flex-shrink:0}
-@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(3,1fr)}.dash-grid-2,.dash-grid-3,.dash-grid-32{grid-template-columns:1fr}}
-</style>
-<div class="container">
-<div class="case-section-header fade-up">
-<div><p class="section-label">03 — Sales Data Analysis</p><h2 class="case-section-title">销售数据分析</h2></div>
-
-</div>
-
-<!-- KPIs -->
-<div class="kpi-grid fade-up">
-<div class="kpi-box"><div class="kpi-val">241,669</div><div class="kpi-lbl">总销售件数</div></div>
-<div class="kpi-box g"><div class="kpi-val">¥113.4M</div><div class="kpi-lbl">总销售额</div></div>
-<div class="kpi-box b"><div class="kpi-val">63.1%</div><div class="kpi-lbl">整体售罄率</div></div>
-<div class="kpi-box"><div class="kpi-val">45</div><div class="kpi-lbl">上市 SKU 数</div></div>
-<div class="kpi-box"><div class="kpi-val">382,771</div><div class="kpi-lbl">总订货量</div></div>
-</div>
-
-<!-- Top 10 + Weekly trend -->
-<div class="dash-grid-32 fade-up" style="transition-delay:0.05s">
-<div class="dash-card">
-<div class="dash-card-title">TOP 10 SKU 销量排名</div>
-<div style="display:flex;align-items:center;gap:10px;padding:4px 0 8px;border-bottom:1px solid #f0f0ec;margin-bottom:4px">
-<div style="width:22px"></div>
-<div style="font-size:0.62rem;color:var(--gray-light);width:86px">款号</div>
-<div style="font-size:0.62rem;color:var(--gray-light);flex:1">类目 / Domain</div>
-<div style="width:100px;font-size:0.62rem;color:var(--gray-light)">销量</div>
-<div style="font-size:0.62rem;color:var(--gray-light);width:44px;text-align:right">售件</div>
-<div style="font-size:0.62rem;color:var(--gray-light);width:40px;text-align:right">ST%</div>
-</div>
-<div id="top10-list"></div>
-</div>
-<div class="dash-card">
-<div class="dash-card-title">周度销售趋势 · WK21—WK48</div>
-<div id="weekly-chart" class="wk-bar"></div>
-<div style="margin-top:16px;padding:12px 14px;background:#f8f7f3;border-left:3px solid var(--accent)">
-<div style="font-size:0.72rem;font-weight:500;color:var(--black);margin-bottom:4px">销售高峰 WK30—WK35</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">WK30—WK35 为销售密集期，单周最高峰 WK31 达 20,924 件。WK36 后进入稳定消化期，WK40 出现二次小高峰（18,599件），尾货清理顺畅。</div>
-</div>
-</div>
-</div>
-
-<!-- ST% by Category + Price Band -->
-<div class="dash-grid-2 fade-up" style="transition-delay:0.1s">
-<div class="dash-card">
-<div class="dash-card-title">品类售罄率分析 · ST% by Category</div>
-<div id="cat-st-bars"></div>
-</div>
-<div class="dash-card">
-<div class="dash-card-title">Lifestyle 售罄率分析 · ST% by Lifestyle</div>
-<div id="lifestyle-st-bars"></div>
-</div>
-</div>
-
-<!-- ST% distribution + Price band -->
-<div class="dash-grid-2 fade-up" style="transition-delay:0.15s">
-<div class="dash-card">
-<div class="dash-card-title">SKU 售罄率分布 · ST% Distribution (45 SKUs)</div>
-<div id="st-dist-bars"></div>
-<div style="margin-top:14px;padding:12px 14px;background:#f8f7f3;border-left:3px solid #5aade8">
-<div style="font-size:0.72rem;font-weight:500;color:var(--black);margin-bottom:4px">结构分析</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">44% SKU 售罄率在 50-70% 合理区间；24% SKU 在 30-50% 属去化偏慢，主要集中在 VARSITY 品类；仅 13% SKU 超过 70% 高售罄水位，是潜在补货机会款。</div>
-</div>
-</div>
-<div class="dash-card">
-<div class="dash-card-title">价格带分析 · Price Band Performance</div>
-<div id="price-band-bars"></div>
-<div style="margin-top:14px;padding:12px 14px;background:#f8f7f3;border-left:3px solid #27ae60">
-<div style="font-size:0.72rem;font-weight:500;color:var(--black);margin-bottom:4px">价格策略洞察</div>
-<div style="font-size:0.75rem;color:var(--gray-dark);line-height:1.6">¥469—499 价格带是绝对走量主力（53.9% 销量占比），高效匹配 STREET/MONOGRAM 系列。¥399—439 带性价比优势明显，ST% 同步较优。¥569—639 高端带销量受限但贡献高人均客单。</div>
-</div>
-</div>
-</div>
-
-<!-- All SKU ST% heatmap style table -->
-<div class="dash-card fade-up" style="transition-delay:0.2s">
-<div class="dash-card-title">全 SKU 售罄率一览 · All SKU Sell-Through Overview</div>
-<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:6px" id="sku-heatmap"></div>
-<div style="display:flex;gap:16px;margin-top:8px;font-size:0.68rem;color:var(--gray-mid)">
-<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;background:#e8796a;opacity:0.7"></span>&lt;30%</span>
-<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;background:#f0b429;opacity:0.7"></span>30—50%</span>
-<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;background:#c8a96e;opacity:0.7"></span>50—70%</span>
-<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;background:#6abf7a;opacity:0.8"></span>70—85%</span>
-<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;background:#27ae60"></span>&gt;85%</span>
-</div>
-</div>
-
-</div>
-</section>
-
-<script>
-(function(){
-var top10=[
-{rank:1,style:'3ATSM0454',domain:'STREET / MONOGRAM',price:499,sales:23059,st:68.9},
-{rank:2,style:'3ATSM0654',domain:'STREET / MONOGRAM',price:499,sales:21010,st:70.9},
-{rank:3,style:'3ATSM0754',domain:'STREET_VINTAGE / MONOGRAM',price:499,sales:17901,st:72.1},
-{rank:4,style:'3ATSB0354',domain:'DAILY / BASIC',price:339,sales:13990,st:60.9},
-{rank:5,style:'3ATSB0154',domain:'DAILY / BASIC',price:399,sales:12694,st:74.0},
-{rank:6,style:'3ATSB1654',domain:'STREET / BASIC',price:499,sales:11954,st:70.0},
-{rank:7,style:'3ATSE0154',domain:'DAILY / MEGA BEAR',price:439,sales:9735,st:74.0},
-{rank:8,style:'3ATSM0554',domain:'STREET / MONOGRAM',price:499,sales:9499,st:58.9},
-{rank:9,style:'3ATSB0554',domain:'STREET / BASIC',price:499,sales:9392,st:75.1},
-{rank:10,style:'3ATSM0854',domain:'STREET_VINTAGE / MONOGRAM',price:499,sales:9066,st:59.3}
-];
-var maxSales=top10[0].sales;
-var t10el=document.getElementById('top10-list');
-if(t10el){t10el.innerHTML=top10.map(function(it){
-var barW=Math.round(it.sales/maxSales*100);
-var stC=it.st>=70?'#27ae60':it.st>=50?'#c8a96e':'#888';
-return '<div class="sku-row">'
-+'<div class="sku-rank'+(it.rank<=3?' top3':'')+'">'+it.rank+'</div>'
-+'<div class="sku-code">'+it.style+'</div>'
-+'<div class="sku-domain">'+it.domain+'</div>'
-+'<div class="sku-bar-wrap"><div class="sku-bar-fill" style="width:'+barW+'%;background:var(--accent)"></div></div>'
-+'<div class="sku-sales">'+it.sales.toLocaleString()+'</div>'
-+'<div class="sku-st" style="color:'+stC+'">'+it.st+'%</div>'
-+'</div>';
-}).join('');}
-
-// Weekly chart
-var wkData=[5,0,5,25,0,620,926,2578,12925,19275,20924,19804,19096,17882,19398,13577,13840,12901,11533,18599,10379,8784,9279,5629,5506,5387,3534,3819];
-var wkLabels=['WK21','WK22','WK23','WK24','WK25','WK26','WK27','WK28','WK29','WK30','WK31','WK32','WK33','WK34','WK35','WK36','WK37','WK38','WK39','WK40','WK41','WK42','WK43','WK44','WK45','WK46','WK47','WK48'];
-var wkMax=Math.max.apply(null,wkData);
-var wcel=document.getElementById('weekly-chart');
-if(wcel){wcel.innerHTML=wkData.map(function(v,i){
-var h=Math.max(v/wkMax*76,v>0?2:0);
-var isPeak=v>15000;
-return '<div class="wk-bar-item">'
-+'<div class="wk-b" style="height:'+h+'px;background:'+(isPeak?'var(--black)':'var(--accent)')+';" title="'+wkLabels[i]+': '+v.toLocaleString()+'件"></div>'
-+'<div class="wk-x">'+wkLabels[i]+'</div>'
-+'</div>';
-}).join('');}
-
-// Category ST bars
-var catData=[
-{name:'HEART',sales:8163,order:10280,st:79.4,c:'#6abf7a'},
-{name:'MEGA BEAR',sales:9735,order:13165,st:73.9,c:'#6abf7a'},
-{name:'BASIC',sales:98785,order:153149,st:64.5,c:'#c8a96e'},
-{name:'MONOGRAM',sales:104362,order:162180,st:64.3,c:'#c8a96e'},
-{name:'LIFESTYLE GFX',sales:2367,order:3725,st:63.5,c:'#c8a96e'},
-{name:'VARSITY',sales:18257,order:40272,st:45.3,c:'#f0b429'}
-];
-var csel=document.getElementById('cat-st-bars');
-if(csel){csel.innerHTML=catData.map(function(d){
-return '<div class="st-row">'
-+'<div class="st-label">'+d.name+'</div>'
-+'<div class="st-track">'
-+'<div class="st-fill" style="width:'+d.st+'%;background:'+d.c+'">'
-+'<span class="st-fill-val">'+d.st+'%</span>'
-+'</div>'
-+'</div>'
-+'<div class="st-pct" style="color:'+d.c+'">'+d.sales.toLocaleString()+'</div>'
-+'</div>';
-}).join('');}
-
-// Lifestyle ST bars
-var lsData=[
-{name:'STREET',st:66.6,sales:111199,c:'#5aade8'},
-{name:'DAILY',st:65.8,sales:53256,c:'#5aade8'},
-{name:'ST_VINTAGE',st:65.7,sales:48199,c:'#9b8ec4'},
-{name:'LUXURY',st:48.1,sales:16842,c:'#f0b429'},
-{name:'SPORTIVE',st:46.2,sales:12173,c:'#f0b429'}
-];
-var lsel=document.getElementById('lifestyle-st-bars');
-if(lsel){lsel.innerHTML=lsData.map(function(d){
-return '<div class="st-row">'
-+'<div class="st-label">'+d.name+'</div>'
-+'<div class="st-track">'
-+'<div class="st-fill" style="width:'+d.st+'%;background:'+d.c+'">'
-+'<span class="st-fill-val">'+d.st+'%</span>'
-+'</div>'
-+'</div>'
-+'<div class="st-pct" style="color:'+d.c+'">'+d.sales.toLocaleString()+'</div>'
-+'</div>';
-}).join('');}
-
-// ST% distribution
-var stDist=[
-{bin:'< 30%',count:2,color:'#e8796a'},
-{bin:'30—50%',count:11,color:'#f0b429'},
-{bin:'50—70%',count:20,color:'#c8a96e'},
-{bin:'70—85%',count:11,color:'#6abf7a'},
-{bin:'> 85%',count:1,color:'#27ae60'}
-];
-var stMax=20;
-var sdel=document.getElementById('st-dist-bars');
-if(sdel){sdel.innerHTML=stDist.map(function(d){
-var w=d.count/stMax*100;
-return '<div class="st-bin-row">'
-+'<div class="st-bin-label">'+d.bin+'</div>'
-+'<div class="st-bin-bar"><div class="st-bin-fill" style="width:'+w+'%;background:'+d.color+';opacity:0.85"><span>'+d.count+'</span></div></div>'
-+'<div class="st-bin-count">'+d.count+' SKUs</div>'
-+'</div>';
-}).join('');}
-
-// Price band
-var pbData=[
-{band:'¥269—339',sales:23860,order:37653,st:63.4,share:9.9},
-{band:'¥399—439',sales:62721,order:99494,st:63.0,share:26.0},
-{band:'¥469—499',sales:130377,order:199705,st:65.3,share:53.9},
-{band:'¥569—639',sales:24711,order:45919,st:53.8,share:10.2}
-];
-var pbMax=130377;
-var pbel=document.getElementById('price-band-bars');
-if(pbel){
-pbel.innerHTML='<div style="display:flex;gap:8px;margin-bottom:12px">'
-+'<div style="font-size:0.62rem;color:var(--gray-light);width:72px">价格带</div>'
-+'<div style="font-size:0.62rem;color:var(--gray-light);flex:1">销量分布</div>'
-+'<div style="font-size:0.62rem;color:var(--gray-light);width:44px;text-align:right">销量</div>'
-+'<div style="font-size:0.62rem;color:var(--gray-light);width:38px;text-align:right">占比</div>'
-+'<div style="font-size:0.62rem;color:var(--gray-light);width:38px;text-align:right">ST%</div>'
-+'</div>'
-+pbData.map(function(d){
-var w=d.sales/pbMax*100;
-var stC=d.st>=65?'#27ae60':d.st>=60?'#c8a96e':'#f0b429';
-return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">'
-+'<div style="font-size:0.7rem;color:var(--black);font-weight:500;width:72px;flex-shrink:0">'+d.band+'</div>'
-+'<div style="flex:1;height:18px;background:#f0f0ec;overflow:hidden">'
-+'<div style="width:'+w+'%;height:100%;background:var(--accent);opacity:0.7;display:flex;align-items:center;padding-left:6px">'
-+'</div></div>'
-+'<div style="font-size:0.7rem;font-weight:500;color:var(--black);width:44px;text-align:right">'+d.sales.toLocaleString()+'</div>'
-+'<div style="font-size:0.68rem;color:var(--gray-mid);width:38px;text-align:right">'+d.share+'%</div>'
-+'<div style="font-size:0.68rem;font-weight:500;width:38px;text-align:right;color:'+stC+'">'+d.st+'%</div>'
-+'</div>';
-}).join('');
-}
-
-// SKU heatmap
-var allSKUs=[
-{style:'3ATSM0454',st:68.9},{style:'3ATSM0654',st:70.9},{style:'3ATSM0754',st:72.1},
-{style:'3ATSB0354',st:60.9},{style:'3ATSB0154',st:74.0},{style:'3ATSB1654',st:70.0},
-{style:'3ATSE0154',st:74.0},{style:'3ATSM0554',st:58.9},{style:'3ATSB0554',st:75.1},
-{style:'3ATSM0854',st:59.3},{style:'3ATSB0254',st:61.7},{style:'3ATSM0354',st:77.7},
-{style:'3ATSM0154',st:37.6},{style:'3ATSM1054',st:77.5},{style:'3ATSM0954',st:59.2},
-{style:'3ATSH0254',st:78.0},{style:'3ATSB0654',st:68.5},{style:'3ATSB2054',st:64.0},
-{style:'3ATSB0754',st:60.4},{style:'3ATSB2154',st:63.5},{style:'3ATSB0854',st:60.0},
-{style:'3ATSB1054',st:56.4},{style:'3ATSB0554b',st:75.1},{style:'3FTSM0254',st:76.9},
-{style:'3FTSN0354',st:86.6},{style:'3FTSV0154',st:75.0},{style:'3FTSB0154',st:61.6},
-{style:'3FTSV0254',st:62.3},{style:'3FTSB0454',st:68.5},{style:'3FTSB0354',st:64.7},
-{style:'3ATSB1554',st:60.3},{style:'3ATSN0154',st:45.5},{style:'3ATSV0154',st:57.8},
-{style:'3ATSV0554',st:43.6},{style:'3ATSV0254',st:33.9},{style:'3ATSV0354',st:42.2},
-{style:'3ATSV0454',st:26.0},{style:'3ATSV2054',st:30.8},{style:'3ATSV2154',st:41.3},
-{style:'3ATSB1154',st:43.3},{style:'3ATSB1254',st:38.4},{style:'3ATSB0954',st:44.8},
-{style:'3ATSN0354',st:23.0},{style:'3FTSV0354',st:53.7},{style:'3FTSV0454',st:35.2}
-];
-function stColor(st){
-if(st<30)return '#e8796a';
-if(st<50)return '#f0b429';
-if(st<70)return '#c8a96e';
-if(st<85)return '#6abf7a';
-return '#27ae60';
-}
-var hmEl=document.getElementById('sku-heatmap');
-if(hmEl){hmEl.innerHTML=allSKUs.map(function(s){
-var c=stColor(s.st);
-return '<div style="background:'+c+';opacity:0.8;padding:8px 6px;text-align:center;cursor:default" title="'+s.style+': '+s.st+'%">'
-+'<div style="font-size:0.58rem;color:#fff;font-weight:500;line-height:1.2;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">'+s.style.slice(4)+'</div>'
-+'<div style="font-size:0.7rem;color:#fff;font-weight:600;margin-top:3px">'+s.st+'%</div>'
-+'</div>';
-}).join('');}
-})();
-</script>
-<section id="about" style="background:var(--white);padding:100px 40px">
-<div class="container">
-<p class="section-label">About Me</p>
-<div style="display:grid;grid-template-columns:2fr 3fr;gap:80px;align-items:start">
-<div class="fade-up">
-<h2 style="font-family:'DM Serif Display',serif;font-size:clamp(28px,3vw,40px);line-height:1.15;margin-bottom:36px">万子嘉</h2>
-<div style="margin-bottom:32px"><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-mid);margin-bottom:6px">毕业院校</div><div style="font-size:0.95rem;color:var(--black);line-height:1.6">东华大学</div></div>
-<div style="margin-bottom:32px"><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-mid);margin-bottom:6px">专业方向</div><div style="font-size:0.95rem;color:var(--black);line-height:1.6">纺织材料与纺织品设计<br>（数字化方向）</div></div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-top:28px">
-<div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--gray-dark)"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:var(--accent);flex-shrink:0"><rect x="1" y="3" width="12" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="192c2d2d292a282d2c21596868377a7674">[email&#160;protected]</a></div>
-<div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--gray-dark)"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:var(--accent);flex-shrink:0"><path d="M2 2h3l1.5 3.5-1.5 1a8 8 0 004 4l1-1.5L13 10.5v3A11 11 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>19858873036</div>
-<div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--gray-dark)"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color:var(--accent);flex-shrink:0"><path d="M7 1C3.69 1 1 3.36 1 6.27c0 1.7.9 3.22 2.32 4.22l-.6 2.51 2.72-1.35A6.8 6.8 0 007 11.54c3.31 0 6-2.36 6-5.27S10.31 1 7 1z" stroke="currentColor" stroke-width="1.2"/></svg>only_TZJZ</div>
-</div>
-</div>
-<div class="fade-up" style="transition-delay:0.15s">
-<h3 style="font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:36px">专业技能</h3>
-<div id="skill-rows"></div>
-</div>
-</div>
-</div>
-</section>
-
-<footer style="background:var(--black);color:rgba(255,255,255,0.3);padding:32px 40px;display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;letter-spacing:0.06em;flex-wrap:wrap;gap:12px">
-<span style="font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,0.6);font-style:italic">万子嘉</span>
-<span>Merchandise Planning Portfolio</span>
-<span>2025 All rights reserved.</span>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-(function(){
-// Fade-up observer
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
-document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
-
-// Monthly sales bar chart
-var data=[{m:'1月',v:62},{m:'2月',v:45},{m:'3月',v:78},{m:'4月',v:85},{m:'5月',v:72},{m:'6月',v:95},{m:'7月',v:88},{m:'8月',v:110},{m:'9月',v:98},{m:'10月',v:75},{m:'11月',v:120},{m:'12月',v:105}];
-var maxV=Math.max.apply(null,data.map(function(d){return d.v;}));
-var bc=document.getElementById('bar-chart');
-if(bc){data.forEach(function(d){var item=document.createElement('div');item.style.cssText='display:flex;flex-direction:column;align-items:center;flex:1';item.innerHTML='<div style="width:100%;background:#c8a96e;opacity:0.75;height:'+((d.v/maxV)*100)+'%;min-height:4px" title="'+d.v+'万"></div><div style="font-size:0.65px;color:#bbb;margin-top:5px;font-size:0.65rem">'+d.m+'</div>';bc.appendChild(item);});}
-
-// Skill bars
-var skills=[{n:'AI 应用能力',p:95},{n:'数据分析能力',p:88},{n:'编程能力',p:78},{n:'英语能力',p:72},{n:'设计能力',p:80}];
-var sr=document.getElementById('skill-rows');
-if(sr){sr.innerHTML=skills.map(function(s){return '<div style="margin-bottom:22px"><div style="margin-bottom:8px"><span style="font-size:0.85rem;color:var(--black)">'+s.n+'</span></div><div style="height:3px;background:rgba(0,0,0,0.08);overflow:hidden"><div class="skill-fill" data-w="'+s.p/100+'" style="height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.22,1,.36,1)"></div></div></div>';}).join('');}
-var skillObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.skill-fill').forEach(function(bar,i){setTimeout(function(){bar.style.transform='scaleX('+bar.dataset.w+')';},i*120);});skillObs.unobserve(e.target);}});},{threshold:0.3});
-var aboutSection=document.getElementById('about');if(aboutSection)skillObs.observe(aboutSection);
-
-// Outdoor bars
-var od=[{name:'UTO',share:15,yoy:'+131%',color:'#6abf7a'},{name:'ICEBREAKER',share:12,yoy:'+55%',color:'#5aade8'},{name:'KOLON',share:8,yoy:'+33%',color:'#c8a96e'},{name:'OUTOPIA',share:7,yoy:'+12%',color:'#9b8ec4'},{name:'SURPINE',share:6,yoy:'-34%',color:'#e8796a'},{name:'XBIONIC',share:5,yoy:'+1%',color:'#f0b429'},{name:'ARC TERYX',share:4,yoy:'-16%',color:'#888'},{name:'DECATHLON',share:3,yoy:'+51%',color:'#6abf7a'},{name:'GREY P.',share:3,yoy:'+118%',color:'#5aade8'},{name:'PELLIOT',share:3,yoy:'+88%',color:'#c8a96e'}];
-var mx=Math.max.apply(null,od.map(function(d){return d.share;}));
-var oel=document.getElementById('outdoor-bars');
-if(oel){oel.innerHTML=od.map(function(d){var pos=d.yoy.charAt(0)==='+';return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:72px;font-size:0.7rem;color:var(--gray-dark);text-align:right;flex-shrink:0">'+d.name+'</div><div style="flex:1;height:16px;background:#f0f0ec;overflow:hidden"><div style="width:'+(d.share/mx*100)+'%;height:100%;background:'+d.color+';opacity:0.8"></div></div><div style="width:28px;font-size:0.7rem;font-weight:500;color:var(--black)">'+d.share+'%</div><div style="width:44px;font-size:0.68rem;font-weight:500;color:'+(pos?'#27ae60':'#c0392b')+';text-align:right">'+d.yoy+'</div></div>';}).join('');}
-
-// Category mix bars
-var cm=[{n:'FILA',hd:18,mt:41,tr:12,ts:28},{n:'DESCENTE',hd:7,mt:49,tr:12,ts:33},{n:'LULULEMON',hd:7,mt:41,tr:38,ts:14},{n:'ADIDAS',hd:14,mt:12,tr:35,ts:39},{n:'NIKE',hd:4,mt:33,tr:11,ts:52},{n:'Ind.Avg',hd:11,mt:40,tr:17,ts:32},{n:'MLB',hd:16,mt:48,tr:16,ts:19}];
-var cmel=document.getElementById('cat-mix-bars');
-if(cmel){cmel.innerHTML=cm.map(function(b){return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:72px;font-size:0.72rem;color:var(--gray-dark);text-align:right;flex-shrink:0;'+(b.n==='MLB'?'font-weight:600':'')+'">'+b.n+'</div><div style="flex:1;height:20px;display:flex;overflow:hidden"><div style="width:'+b.hd+'%;background:#5aade8;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+( b.hd>8?b.hd+'%':'')+'</div><div style="width:'+b.mt+'%;background:#9b8ec4;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+( b.mt>8?b.mt+'%':'')+'</div><div style="width:'+b.tr+'%;background:#6abf7a;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+( b.tr>8?b.tr+'%':'')+'</div><div style="width:'+b.ts+'%;background:#f0b429;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+( b.ts>8?b.ts+'%':'')+'</div></div></div>';}).join('');}
-
-function makeSeasonBars(data,elId){var el=document.getElementById(elId);if(!el)return;el.innerHTML=data.map(function(b){return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:72px;font-size:0.72rem;color:var(--gray-dark);text-align:right;flex-shrink:0;'+(b.name==='MLB'?'font-weight:600':'')+'">'+b.name+'</div><div style="flex:1;height:20px;display:flex;overflow:hidden">'+(b.win>0?'<div style="width:'+b.win+'%;background:#5aade8;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+(b.win>=14?b.win+'%':'')+'</div>':'')+'<div style="width:'+b.fall+'%;background:#f0a0a0;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#333">'+(b.fall>=14?b.fall+'%':'')+'</div></div></div>';}).join('');}
-makeSeasonBars([{name:'FILA',win:20,fall:80},{name:'DESCENTE',win:20,fall:80},{name:'LULULEMON',win:70,fall:30},{name:'ADIDAS',win:14,fall:86},{name:'NIKE',win:59,fall:42},{name:'MLB',win:12,fall:88}],'season-sw-bars');
-makeSeasonBars([{name:'FILA',win:26,fall:74},{name:'DESCENTE',win:51,fall:49},{name:'LULULEMON',win:8,fall:92},{name:'ADIDAS',win:0,fall:100},{name:'NIKE',win:28,fall:72},{name:'MLB',win:0,fall:100}],'season-ts-bars');
-
-function makeGenderBars(data,elId){var el=document.getElementById(elId);if(!el)return;el.innerHTML=data.map(function(b){return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:72px;font-size:0.72rem;color:var(--gray-dark);text-align:right;flex-shrink:0;'+(b.name==='MLB'?'font-weight:600':'')+'">'+b.name+'</div><div style="flex:1;height:20px;display:flex;overflow:hidden">'+(b.m>0?'<div style="width:'+b.m+'%;background:#5aade8;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+(b.m>=12?b.m+'%':'')+'</div>':'')+(b.f>0?'<div style="width:'+b.f+'%;background:#f0a0a0;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#333">'+(b.f>=12?b.f+'%':'')+'</div>':'')+(b.u>0?'<div style="width:'+b.u+'%;background:#6abf7a;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff">'+(b.u>=12?b.u+'%':'')+'</div>':'')+'</div></div>';}).join('');}
-makeGenderBars([{name:'FILA',m:12,f:64,u:25},{name:'DESCENTE',m:25,f:22,u:53},{name:'LULULEMON',m:0,f:76,u:24},{name:'ADIDAS',m:14,f:61,u:26},{name:'NIKE',m:12,f:0,u:88},{name:'MLB',m:12,f:0,u:88}],'gender-sw-bars');
-makeGenderBars([{name:'FILA',m:43,f:9,u:48},{name:'DESCENTE',m:5,f:3,u:93},{name:'LULULEMON',m:0,f:50,u:50},{name:'ADIDAS',m:42,f:23,u:35},{name:'NIKE',m:35,f:0,u:65},{name:'MLB',m:5,f:0,u:95}],'gender-ts-bars');
-})();
-</script>
+        // 4. 进度条动画初始化（确保加载时不闪屏）
+        document.addEventListener('DOMContentLoaded', () => {
+            const barFills = document.querySelectorAll('.mkt-bar-fill');
+            barFills.forEach(bar => {
+                bar.style.width = '0'; // 初始宽度为0
+                // 等待元素可见后再触发动画（已通过IntersectionObserver处理）
+            });
+        });
+    </script>
 </body>
 </html>
